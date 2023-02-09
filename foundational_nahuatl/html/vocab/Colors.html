@@ -1,0 +1,99 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>Robert Pugh</title>
+    <style>
+      body {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-left: 6em;
+        margin-right: 6em;
+        color: black;
+      }
+      ul {
+          line-height: 30px;
+      }
+      th, td {
+        padding: 15px;
+        text-align: left;
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <script>
+  function toggleViz(e){
+        if ( e.style.visibility !== 'hidden' ) {
+          e.style.visibility = 'hidden';
+      } else {
+          e.style.visibility = 'visible';
+      }
+
+  }
+  function showHideLeft() {
+    var toggles = document.getElementsByClassName("togglable-left");
+    for (var i = 0; i < toggles.length; i++) {
+      toggleViz(toggles.item(i));
+    }
+  }
+
+  function showHideRight() {
+    var toggles = document.getElementsByClassName("togglable-right");
+    for (var i = 0; i < toggles.length; i++) {
+      toggleViz(toggles.item(i));
+    }
+  }
+
+
+  showHideRight()
+  </script>
+
+  <body style="background-color:white; margin-right: 25%;">
+    <h2>
+      Colors
+      </h2>
+      <button onClick="showHideLeft()">
+      Hide/Show Nahuatl
+      </button>
+      <button onClick="showHideRight()">
+        Hide/Show English
+        </button>
+      <table>
+        <tr>
+          <th>Nahuatl</th>
+<th>English</th>
+<th>Your Guess</th>
+        </tr>
+        <tr>
+<td class="togglable-left">chīchīltic</td>
+<td class="togglable-right">red</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">coztiz</td>
+<td class="togglable-right">yellow</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">iztāc</td>
+<td class="togglable-right">white</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">nextic</td>
+<td class="togglable-right">blue-gray</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">tlīltic</td>
+<td class="togglable-right">black</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">xoxoctic</td>
+<td class="togglable-right">blue-green</td>
+<td><input></td>
+</tr>
+      </table> 
+  </body></html>
+  

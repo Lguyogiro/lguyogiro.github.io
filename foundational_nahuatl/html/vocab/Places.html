@@ -1,0 +1,164 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>Robert Pugh</title>
+    <style>
+      body {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-left: 6em;
+        margin-right: 6em;
+        color: black;
+      }
+      ul {
+          line-height: 30px;
+      }
+      th, td {
+        padding: 15px;
+        text-align: left;
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <script>
+  function toggleViz(e){
+        if ( e.style.visibility !== 'hidden' ) {
+          e.style.visibility = 'hidden';
+      } else {
+          e.style.visibility = 'visible';
+      }
+
+  }
+  function showHideLeft() {
+    var toggles = document.getElementsByClassName("togglable-left");
+    for (var i = 0; i < toggles.length; i++) {
+      toggleViz(toggles.item(i));
+    }
+  }
+
+  function showHideRight() {
+    var toggles = document.getElementsByClassName("togglable-right");
+    for (var i = 0; i < toggles.length; i++) {
+      toggleViz(toggles.item(i));
+    }
+  }
+
+
+  showHideRight()
+  </script>
+
+  <body style="background-color:white; margin-right: 25%;">
+    <h2>
+      Places
+      </h2>
+      <button onClick="showHideLeft()">
+      Hide/Show Nahuatl
+      </button>
+      <button onClick="showHideRight()">
+        Hide/Show English
+        </button>
+      <table>
+        <tr>
+          <th>Nahuatl</th>
+<th>English</th>
+<th>Your Guess</th>
+        </tr>
+        <tr>
+<td class="togglable-left">āltepētl</td>
+<td class="togglable-right">town</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">calli</td>
+<td class="togglable-right">house</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">chāntli</td>
+<td class="togglable-right">home</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">mīlli</td>
+<td class="togglable-right">field</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">ohtli</td>
+<td class="togglable-right">road</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">ōztōtl</td>
+<td class="togglable-right">cave</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">tepētl</td>
+<td class="togglable-right">hill</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">cochīhuayān</td>
+<td class="togglable-right">bedroom</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">tēmachtīlōyān</td>
+<td class="togglable-right">school</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">tlacualchīhualōyān</td>
+<td class="togglable-right">kitchen</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">āmoxcalli</td>
+<td class="togglable-right">bookstore</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">āxīxcalli</td>
+<td class="togglable-right">restroom</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">chichicalli</td>
+<td class="togglable-right">doghouse</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">ichcacalli</td>
+<td class="togglable-right">sheepfold</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">pahcalli</td>
+<td class="togglable-right">pharmacy</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">pitzocalli</td>
+<td class="togglable-right">pigsty</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">teohcalli</td>
+<td class="togglable-right">church</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">tōtolcalli</td>
+<td class="togglable-right">henhouse</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">xōchimīlli</td>
+<td class="togglable-right">garden</td>
+<td><input></td>
+</tr>
+      </table> 
+  </body></html>
+  

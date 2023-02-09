@@ -1,0 +1,119 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>Robert Pugh</title>
+    <style>
+      body {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-left: 6em;
+        margin-right: 6em;
+        color: black;
+      }
+      ul {
+          line-height: 30px;
+      }
+      th, td {
+        padding: 15px;
+        text-align: left;
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <script>
+  function toggleViz(e){
+        if ( e.style.visibility !== 'hidden' ) {
+          e.style.visibility = 'hidden';
+      } else {
+          e.style.visibility = 'visible';
+      }
+
+  }
+  function showHideLeft() {
+    var toggles = document.getElementsByClassName("togglable-left");
+    for (var i = 0; i < toggles.length; i++) {
+      toggleViz(toggles.item(i));
+    }
+  }
+
+  function showHideRight() {
+    var toggles = document.getElementsByClassName("togglable-right");
+    for (var i = 0; i < toggles.length; i++) {
+      toggleViz(toggles.item(i));
+    }
+  }
+
+
+  showHideRight()
+  </script>
+
+  <body style="background-color:white; margin-right: 25%;">
+    <h2>
+      Plants
+      </h2>
+      <button onClick="showHideLeft()">
+      Hide/Show Nahuatl
+      </button>
+      <button onClick="showHideRight()">
+        Hide/Show English
+        </button>
+      <table>
+        <tr>
+          <th>Nahuatl</th>
+<th>English</th>
+<th>Your Guess</th>
+        </tr>
+        <tr>
+<td class="togglable-left">acatl</td>
+<td class="togglable-right">reed</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">chīlli</td>
+<td class="togglable-right">chile pepper</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">cuahuitl</td>
+<td class="togglable-right">tree, wood</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">yetl</td>
+<td class="togglable-right">bean</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">metl</td>
+<td class="togglable-right">maguey</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">nanacatl, xōlētl</td>
+<td class="togglable-right">mushroom</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">ocotl</td>
+<td class="togglable-right">pine tree</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">xihuitl</td>
+<td class="togglable-right">leaf</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">xōchitl</td>
+<td class="togglable-right">flower</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">zacatl</td>
+<td class="togglable-right">grass</td>
+<td><input></td>
+</tr>
+      </table> 
+  </body></html>
+  

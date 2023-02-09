@@ -1,0 +1,149 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>Robert Pugh</title>
+    <style>
+      body {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-left: 6em;
+        margin-right: 6em;
+        color: black;
+      }
+      ul {
+          line-height: 30px;
+      }
+      th, td {
+        padding: 15px;
+        text-align: left;
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <script>
+  function toggleViz(e){
+        if ( e.style.visibility !== 'hidden' ) {
+          e.style.visibility = 'hidden';
+      } else {
+          e.style.visibility = 'visible';
+      }
+
+  }
+  function showHideLeft() {
+    var toggles = document.getElementsByClassName("togglable-left");
+    for (var i = 0; i < toggles.length; i++) {
+      toggleViz(toggles.item(i));
+    }
+  }
+
+  function showHideRight() {
+    var toggles = document.getElementsByClassName("togglable-right");
+    for (var i = 0; i < toggles.length; i++) {
+      toggleViz(toggles.item(i));
+    }
+  }
+
+
+  showHideRight()
+  </script>
+
+  <body style="background-color:white; margin-right: 25%;">
+    <h2>
+      Things
+      </h2>
+      <button onClick="showHideLeft()">
+      Hide/Show Nahuatl
+      </button>
+      <button onClick="showHideRight()">
+        Hide/Show English
+        </button>
+      <table>
+        <tr>
+          <th>Nahuatl</th>
+<th>English</th>
+<th>Your Guess</th>
+        </tr>
+        <tr>
+<td class="togglable-left">āmoxtli</td>
+<td class="togglable-right">book</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">cactli</td>
+<td class="togglable-right">shoe</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">caxitl</td>
+<td class="togglable-right">plate, bowl</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">chiquihuitl</td>
+<td class="togglable-right">basket</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">cītlalin</td>
+<td class="togglable-right">star</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">cōmitl</td>
+<td class="togglable-right">jar, pot</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">cuēitl</td>
+<td class="togglable-right">skirt</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">cuīcatl</td>
+<td class="togglable-right">song</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">mītl</td>
+<td class="togglable-right">arrow</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">petlatl</td>
+<td class="togglable-right">reed mat</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">tlapechtli</td>
+<td class="togglable-right">bed</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">tlahtōlli</td>
+<td class="togglable-right">speech</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">tōcāitl</td>
+<td class="togglable-right">name</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">xōchitl</td>
+<td class="togglable-right">flower</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">xoctli</td>
+<td class="togglable-right">pot</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">metlatl</td>
+<td class="togglable-right">corn-grinding stone</td>
+<td><input></td>
+</tr>
+      </table> 
+  </body></html>
+  

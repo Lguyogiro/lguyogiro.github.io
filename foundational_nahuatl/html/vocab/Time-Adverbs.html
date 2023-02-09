@@ -1,0 +1,159 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>Robert Pugh</title>
+    <style>
+      body {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-left: 6em;
+        margin-right: 6em;
+        color: black;
+      }
+      ul {
+          line-height: 30px;
+      }
+      th, td {
+        padding: 15px;
+        text-align: left;
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <script>
+  function toggleViz(e){
+        if ( e.style.visibility !== 'hidden' ) {
+          e.style.visibility = 'hidden';
+      } else {
+          e.style.visibility = 'visible';
+      }
+
+  }
+  function showHideLeft() {
+    var toggles = document.getElementsByClassName("togglable-left");
+    for (var i = 0; i < toggles.length; i++) {
+      toggleViz(toggles.item(i));
+    }
+  }
+
+  function showHideRight() {
+    var toggles = document.getElementsByClassName("togglable-right");
+    for (var i = 0; i < toggles.length; i++) {
+      toggleViz(toggles.item(i));
+    }
+  }
+
+
+  showHideRight()
+  </script>
+
+  <body style="background-color:white; margin-right: 25%;">
+    <h2>
+      Time-Adverbs
+      </h2>
+      <button onClick="showHideLeft()">
+      Hide/Show Nahuatl
+      </button>
+      <button onClick="showHideRight()">
+        Hide/Show English
+        </button>
+      <table>
+        <tr>
+          <th>Nahuatl</th>
+<th>English</th>
+<th>Your Guess</th>
+        </tr>
+        <tr>
+<td class="togglable-left">achīquin</td>
+<td class="togglable-right">a little later</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">achtopa</td>
+<td class="togglable-right">first</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">āxcān</td>
+<td class="togglable-right">today, now</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">ayamo</td>
+<td class="togglable-right">not yet</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">cēcēpa</td>
+<td class="togglable-right">sometimes</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">cecpa, ceppa</td>
+<td class="togglable-right">once</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">ihcuāc</td>
+<td class="togglable-right">when (conjunction)</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">īhuīptla</td>
+<td class="togglable-right">day after tomorrow</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">īyālhua</td>
+<td class="togglable-right">yesterday</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">miacpa</td>
+<td class="togglable-right">many times ,  often</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">mōmōztla</td>
+<td class="togglable-right">every day</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">mōztla</td>
+<td class="togglable-right">tomorrow</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">nochipa</td>
+<td class="togglable-right">always</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">oc</td>
+<td class="togglable-right">still</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">occeppa</td>
+<td class="togglable-right">again</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">oncān</td>
+<td class="togglable-right">then, there</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">(y)ēxpa</td>
+<td class="togglable-right">three times</td>
+<td><input></td>
+</tr>
+<tr>
+<td class="togglable-left">yōlic</td>
+<td class="togglable-right">slowly</td>
+<td><input></td>
+</tr>
+      </table> 
+  </body></html>
+  
