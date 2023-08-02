@@ -1,0 +1,39 @@
+p {
+ text-align: justify;
+}
+
+body {
+	font-family: Zilla Slab, Sans, Helvetica;
+ margin: auto;
+ width: 75%;
+ position: relative;
+}
+
+th {
+ font-weight: bold ;
+}
+
+#main {
+  padding: 5pt;
+}
+
+td {
+  padding-left: 4pt;
+  padding-right: 10pt;
+  padding-bottom: 2pt;
+  padding-top: 2pt;
+}
+
+
+table { border-collapse:collapse; }
+table thead th { 
+border-top: 2px solid #000; 
+border-bottom: 1px solid #000; }
+
+tr.border_bottom td {
+  border-bottom: 2px solid black;
+}
+
+.c1 {
+	font-weight: bold;
+}
