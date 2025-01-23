@@ -1,0 +1,118 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head>
+    <meta charset="utf-8">
+    <meta name="generator" content="pandoc">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>00</title>
+    <style type="text/css">
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        span.underline{text-decoration: underline;}
+        div.column{display: inline-block; vertical-align: top; width: 50%;}
+        pre{background-color: #f4f4f4; padding: 10px; border-radius: 5px; width: 50%}
+    </style>
+    <link rel="stylesheet" href="../../../../pandoc.css">
+  <link href="data:text/css,%3Ais(%5Bid*%3D'google_ads_iframe'%5D%2C%5Bid*%3D'taboola-'%5D%2C.taboolaHeight%2C.taboola-placeholder%2C%23top-ad%2C%23credential_picker_container%2C%23credentials-picker-container%2C%23credential_picker_iframe%2C%5Bid*%3D'google-one-tap-iframe'%5D%2C%23google-one-tap-popup-container%2C.google-one-tap__module%2C.google-one-tap-modal-div%2C%23amp_floatingAdDiv%2C%23ez-content-blocker-container)%20%7Bdisplay%3Anone!important%3Bmin-height%3A0!important%3Bheight%3A0!important%3B%7D" rel="stylesheet" type="text/css"></head>
+  <body>
+<p>En esta página les dejo las definiciones y unos ejemplos de unos comandos *nix útiles para trabajar con texto (y para la programación en general)</p>
+
+<h1>Navegando el sistema de archivos</h1>
+<p>Para navegar el sistema de archivos, puedes usar los siguientes comandos:</p>
+<h3>pwd</h3>
+<div style="margin-left: 20px;">
+    <p>Muestra la ruta del directorio actual.</p>
+    <pre><code>$pwd</code>
+    <code>/home/robert</code></pre>
+</div>
+
+<h3>ls</h3>
+<div style="margin-left: 20px;">
+    <p>Lista los archivos y directorios en el directorio actual.</p>
+</div>
+
+<h3>cd</h3>
+<div style="margin-left: 20px;">
+    <p>Cambia de directorio. </p>
+    <p>Por ejemplo, <pre><code>cd /home/usuario</code></pre> te llevará al directorio <pre><code>/home/usuario</code></pre> </p>
+    <p>Si haces <pre><code>cd ..</code></pre>, te moverás al directorio padre.</p> 
+    <p>Si haces <pre><code>cd</code></pre>sin argumentos, te llevará al directorio de inicio.</p>
+</div>
+
+<h3>mkdir</h3>
+<div style="margin-left: 20px;">
+    <p>Crea un nuevo directorio. Por ejemplo, <pre><code>mkdir nuevo_directorio</code></pre> creará un directorio llamado <pre><code>nuevo_directorio</code></pre></p>
+</div>
+<h3>touch</h3>
+    <div style="margin-left: 20px;">
+        <p>Crea un nuevo archivo vacío. Por ejemplo, <pre><code>touch nuevo_archivo.txt</code></pre> creará un archivo llamado <pre><code>nuevo_archivo.txt</code></pre></p>
+    </div>
+<h3>cp</h3>
+<div style="margin-left: 20px;">
+    <p>Copia archivos y directorios. Por ejemplo, <pre><code>cp archivo.txt copia.txt</code></pre> copiará el archivo <pre><code>archivo.txt</code></pre> a un nuevo archivo llamado <pre><code>copia.txt</code></pre></p>
+</div>
+<h3>mv</h3>
+<div style="margin-left: 20px;">
+    <p>Mueve archivos y directorios. Por ejemplo, <pre><code>mv archivo.txt /home/usuario/</code></pre> moverá el archivo <pre><code>archivo.txt</code></pre> al directorio <pre><code>/home/usuario/</code></pre></p>
+</div>
+<h3>rm</h3>
+<div style="margin-left: 20px;">
+    <p>Elimina archivos y directorios. Por ejemplo, <pre><code>rm archivo.txt</code></pre> eliminará el archivo <pre><code>archivo.txt</code></pre></p>
+    <p style="color:red">Ten mucho cuidado con "rm", ya que borra por completo y no hay forma de recuperar lo eliminado</p>
+</div>
+
+<h1>Trabajando con texto</h1>
+
+<h3>cut</h3>
+<div style="margin-left: 20px;">
+    <p>Elimina secciones de cada línea de archivos. Por ejemplo, <pre><code>cut -d',' -f1 archivo.csv</code></pre> seleccionará el primer campo de cada línea en un archivo CSV.</p>
+    <p>Este comando es limitado cuando se trata de archivos .csv que pueden contener el símbolo "," en uno de sus campos (porque dividiría ese campo en varios segmentos).</p>
+</div>
+
+<h3>csvcut</h3>
+<div style="margin-left: 20px;">
+    <p>Herramienta para manipular archivos CSV. Por ejemplo, <pre><code>csvcut -c columna archivo.csv</code></pre> seleccionará la columna especificada del archivo CSV.</p>
+</div>
+
+<h3>grep</h3>
+<div style="margin-left: 20px;">
+    <p>Busca patrones en archivos de texto. Por ejemplo, <pre><code>grep 'patrón' archivo.txt</code></pre> buscará el patrón especificado en el archivo.</p>
+</div>
+
+<h3>head</h3>
+<div style="margin-left: 20px;">
+    <p>Muestra las primeras líneas de un archivo. Por ejemplo, <pre><code>head -n 10 archivo.txt</code></pre> mostrará las primeras 10 líneas del archivo.</p>
+</div>
+
+<h3>tail</h3>
+<div style="margin-left: 20px;">
+    <p>Muestra las últimas líneas de un archivo. Por ejemplo, <pre><code>tail -n 10 archivo.txt</code></pre> mostrará las últimas 10 líneas del archivo.</p>
+</div>
+
+<h3>wc</h3>
+<div style="margin-left: 20px;">
+    <p>Cuenta líneas, palabras y caracteres en archivos de texto. Por ejemplo, <pre><code>wc archivo.txt</code></pre> mostrará el número de líneas, palabras y caracteres en el archivo.</p>
+</div>
+
+<h3>wget</h3>
+<div style="margin-left: 20px;">
+    <p>Descarga archivos desde la web. Por ejemplo, <pre><code>wget http://ejemplo.com/archivo.zip</code></pre> descargará el archivo desde la URL especificada.</p>
+</div>
+
+<h3>| (pipe)</h3>
+<div style="margin-left: 20px;">
+    <p>Redirige la salida de un comando como entrada de otro. Por ejemplo, <pre><code>ls | grep 'patrón'</code></pre> listará los archivos y luego buscará el patrón especificado en la lista.</p>
+</div>
+
+<h3>tr</h3>
+<div style="margin-left: 20px;">
+    <p>Traduce o elimina caracteres. Por ejemplo, <pre><code>echo "texto" | tr 'a-z' 'A-Z'</code></pre> convertirá el texto a mayúsculas.</p>
+</div>
+
+<h3>sort</h3>
+<div style="margin-left: 20px;">
+    <p>Ordena líneas de texto. Por ejemplo, <pre><code>sort archivo.txt</code></pre> ordenará las líneas del archivo.</p>
+</div>
+
+<h3>uniq</h3>
+<div style="margin-left: 20px;">
+    <p>Reporta o elimina líneas repetidas. Por ejemplo, <pre><code>uniq archivo.txt</code></pre> eliminará las líneas duplicadas en el archivo.</p>
+</div></div>

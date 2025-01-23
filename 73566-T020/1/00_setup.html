@@ -1,0 +1,41 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head>
+    <meta charset="utf-8">
+    <meta name="generator" content="pandoc">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>00</title>
+    <style type="text/css">
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        span.underline{text-decoration: underline;}
+        div.column{display: inline-block; vertical-align: top; width: 50%;}
+        pre{background-color: #f4f4f4; padding: 10px; border-radius: 5px;}
+    </style>
+    <link rel="stylesheet" href="../../../../pandoc.css">
+  <link href="data:text/css,%3Ais(%5Bid*%3D'google_ads_iframe'%5D%2C%5Bid*%3D'taboola-'%5D%2C.taboolaHeight%2C.taboola-placeholder%2C%23top-ad%2C%23credential_picker_container%2C%23credentials-picker-container%2C%23credential_picker_iframe%2C%5Bid*%3D'google-one-tap-iframe'%5D%2C%23google-one-tap-popup-container%2C.google-one-tap__module%2C.google-one-tap-modal-div%2C%23amp_floatingAdDiv%2C%23ez-content-blocker-container)%20%7Bdisplay%3Anone!important%3Bmin-height%3A0!important%3Bheight%3A0!important%3B%7D" rel="stylesheet" type="text/css"></head>
+  <body>
+    <h1 id="getting-started">Empezando</h1>
+    <h3 id="windows-10">Windows 10</h3>
+  <p>Sí tienes Windows 10, puedes instalar <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">Windows Subsystem for Linux</a> (WSL) para tener acceso a una terminal de Linux. Esto te permitirá usar Python y otros programas de la misma manera que en Linux.</p>
+    <p>Para la plataforma Linux, una buena opción es Ubuntu o Debian. 
+        Una vez que hayas instalado WSL, puedes abrir la terminal de Linux con el comando <code>wsl</code> en la línea de comandos de Windows. 
+        Para acceder a tus archivos de Windows desde la terminal de Linux, puedes ir a la carpeta <code>/mnt/c/</code> y encontrarás tus archivos de Windows en la carpeta <code>/mnt/c/Users/tu_usuario/</code>.</p>
+  <h3 id="other-versions-of-windows">Otros versiones de Windows</h3>
+  <ul>
+  <li>Instalar <a href="https://www.virtualbox.org/">VirtualBox</a></li>
+  <li>Descarga la <a href="https://tinodidriksen.com/uploads/Apertium-VirtualBox-20191205.zip">disk image</a></li>
+  </ul>
+
+    <h3 id="macos">MacOS o Linux</h3>
+    <p>Para MacOS o Linux, ya debería de estar instalado todo lo necesario para esta clase. Sólo abre tu aplicación de la Terminal.</p>
+
+<h1>Instalando Python con un entorno virtual</h1>
+<p>Yo recomiendo que usen un entorno virtual para Python, para evitar complicaciones y detalles en el futuro respecto a las diferentes versiones de Python y/o problemas con dependencias.</p>
+<p>Quizás la opción menos complicada es <a href="https://github.com/pyenv/pyenv?tab=readme-ov-file#a-getting-pyenv">pyenv</a> (abre ese enlace y busca las instrucciones para tu sistema operativo). Una vez instalada, puedes ver todas las versiones de Python disponibles para instalar con: </p>  
+<pre><code>pyenv install --list</code></pre>
+<p>Para instalar una versión de Python, por ejemplo 3.12.8, puedes hacer:</p>
+<pre><code>pyenv install 3.12.8</code></pre>
+<p>Para crear un entorno virtual con esa versión de Python, puedes hacer:</p>
+<pre><code>pyenv virtualenv 3.12.8 mi_entorno</code></pre>
+
+  </body>
+  </html>
