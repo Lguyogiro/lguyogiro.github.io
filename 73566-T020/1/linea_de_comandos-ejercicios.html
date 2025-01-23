@@ -105,7 +105,7 @@
     <ol>
         <li>Descarga el corpus <i>tsunkua</i> <a href="https://raw.githubusercontent.com/ElotlMX/py-elotl/refs/heads/master/elotl/corpora/tsunkua.csv">aquí</a>
             <span class="reveal" onclick="toggleCommand(this)">&#x2795;</span>
-            <pre style="display:none;">wget -O https://raw.githubusercontent.com/ElotlMX/py-elotl/refs/heads/master/elotl/corpora/tsunkua.csv</pre>
+            <pre style="display:none;">wget https://raw.githubusercontent.com/ElotlMX/py-elotl/refs/heads/master/elotl/corpora/tsunkua.csv</pre>
         </li>
         <hr>
         <li>Investiga el número de líneas en el archivo
@@ -135,12 +135,12 @@
         <hr>
         <li>Imprime sólo los nombres de las variantes (tercera columna)
             <span class="reveal" onclick="toggleCommand(this)">&#x2795;</span>
-            <pre style="display:none;">csvcut -d ',' -f 3 tsunkua.csv</pre>
+            <pre style="display:none;">csvcut -c3 tsunkua.csv</pre>
         </li>
         <hr>
         <li>Investiga el número de palabras y carácteres del puro texto Otomí (segunda columna) <bold>hint: usa "|" para mandar la salida de un comando a otro</bold>
             <span class="reveal" onclick="toggleCommand(this)">&#x2795;</span>
-            <pre style="display:none;">csvcut -d ',' -f 1 tsunkua.csv | wc</pre>
+            <pre style="display:none;">csvcut -c2 tsunkua.csv | wc</pre>
         </li>
     </ol>
     <h2>Parte 3</h2>
@@ -157,7 +157,7 @@
     <ol>
         <li>Escribe el puro texto Otomí (columna 2) a un archivo llamado "otomi.txt", y el Español (columna 1) a un archivo llamado "es.txt"
             <span class="reveal" onclick="toggleCommand(this)">&#x2795;</span>
-            <pre style="display:none;">csvcut -d ',' -f 2 tsunkua.csv > otomi.txt && csvcut -d ',' -f 1 tsunkua.csv > es.txt</pre>
+            <pre style="display:none;">csvcut -c2 tsunkua.csv > otomi.txt; csvcut -c1 tsunkua.csv > es.txt</pre>
         </li>
         <hr>
         <li>En otomi.txt, ¿Cuántas líneas tienen la secuencia "xo"? ¿Cuántas líneas no contienen esa secuencia?
