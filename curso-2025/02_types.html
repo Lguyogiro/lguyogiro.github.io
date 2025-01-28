@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos básicos en Python</title>
+</head>
+<body>
+    <h1>Tipos básicos en Python</h1>
+    <p>En Python, hay varios tipos de datos que puedes utilizar para almacenar y manipular información. A continuación, presento algunos de los más comunes.</p>
+
+    <h2>Cadenas (string)</h2>
+    <p>Las cadenas son secuencias de caracteres que se pueden almacenar en variables. Se definen utilizando comillas simples o dobles.</p>
+    <pre>
+nombre = "Juan"
+edad = '25'
+print(nombre)  # Salida: Juan
+print(edad)   # Salida: 25
+    </pre>
+    
+    <h2>Números decimales (float)</h2>
+    <p>Los números decimales son números que tienen una parte decimal. Se pueden representar utilizando el tipo float.</p>
+    <pre>
+altura = 1.75
+peso = 70.5
+print(altura)  # Salida: 1.75
+print(peso)    # Salida: 70.5
+    </pre>
+
+    <h2>Números enteros (int)</h2>
+    <p>Los números enteros son números sin parte decimal. Se pueden representar utilizando el tipo int.</p>
+    <pre>
+edad = 25
+año = 2024
+print(edad)   # Salida: 25
+print(año)    # Salida: 2024
+    </pre>
+
+    <h2>Listas (list)</h2>
+    <p>Las listas son colecciones de elementos que se pueden almacenar en una variable. Se definen utilizando corchetes [] y se separan con comas.</p>
+    <pre>
+frutas = ["manzana", "banana", "naranja"]
+print(frutas)  # Salida: ['manzana', 'banana', 'naranja']
+    </pre>
+    <p>Si tienes un archivo de textos y quieres segmentarlo en oraciones, puedes almacenarlas en una lista. 
+        También son útiles las listas cuando queremos segmentas una frase en palabras.</p>
+    <pre><code>
+texto = "Este es un ejemplo de texto en Python. Este es otro ejemplo."
+oraciones = texto.split(".")
+print(oraciones)  # Salida: ['Este es un ejemplo de texto en Python', ' Este es otro ejemplo', '']
+
+palabras = oraciones[0].split(" ")
+print(palabras)  # Salida: ['Este', 'es', 'un', 'ejemplo', 'de', 'texto', 'en', 'Python']
+    </code></pre>
+    <h2>Diccionarios (Dict)</h2>
+    <p>Los diccionarios son colecciones de pares clave-valor que se pueden almacenar en una variable. Se definen utilizando llaves {} y se separan con comas.</p>
+    <pre>
+persona = {"nombre": "Juan", "edad": 25}
+print(persona)  # Salida: {'nombre': 'Juan', 'edad': 25}
+    </pre>
+
+    <h2>Conjuntos (Set)</h2>
+    <p>Los conjuntos son colecciones de elementos únicos que se pueden almacenar en una variable. Se definen utilizando llaves {} y se separan con comas.</p>
+    <pre>
+colores = {"rojo", "azul", "verde"}
+print("rojo" in colores)  # Salida: True
+    </pre>
+
+    <h2>Booleanos (Bool)</h2>
+    <p>Los booleanos son valores que representan verdadero o falso. Se pueden representar utilizando los valores True y False.</p>
+    <pre>
+</pre>
+
+</body>
+</html>

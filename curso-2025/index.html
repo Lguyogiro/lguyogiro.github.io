@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Programación para la descripción lingüística - UNAM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 75%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            /* background-color: #003366;
+            color: white; */
+            padding: 20px;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Programación para la descripción lingüística</h1>
+        <p>Semestre 2025-2</p>
+        <p>Instructor: <a href="http://robertpugh.site">Robert Allen Pugh</a></p>
+    </div>
+
+    <h2>Información General</h2>
+    <ul>
+        <li>Modalidad: Virtual</li>
+        <li>Créditos: 8</li>
+        <li>Horario: Viernes</li>
+        <li>Horas por semana: 4</li>
+        <li>Campo de conocimiento: Lingüística antropológica</li>
+    </ul>
+
+    <h2>Objetivo General</h2>
+    <p>Proporcionar al estudiante los fundamentos para utilizar la programación en el procesamiento y manejo de datos para la documentación y descripción lingüística, con especial aplicación en el contexto de lenguas minorizadas.</p>
+
+    <h2>Calendario Tentativo</h2>
+    <table>
+        <tr>
+            <th>Fecha</th>
+            <th>Unidad</th>
+            <th>Tema</th>
+            <th>Recursos</th>
+        </tr>
+        <tr>
+            <td>31 enero</td>
+            <td>1</td>
+            <td>
+                <ul>
+                    <li>Introducciónes</li>
+                    <li>¿Qué es la programación?</li>
+                    <li>Práctica: configurar entorno para la programación en *NIX y Python</li>
+                    <li>pyenv</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li><a href="0/00_setup.html">Empezar</a></li>
+                    <li><a href="https://learn.microsoft.com/en-us/windows/wsl/install">Instalar WSL</a></li>
+                    <li><a href="9/text_editors.html">Unos comentarios sobre los editores de texto</a></li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>7 febrero</td>
+            <td>1</td>
+            <td>
+                <ul>
+                    <li>Archivos</li>
+                    <li>Herramientas usando la línea de comandos: ls, cd, pwd, mkdir, rm, head, tail, cat, grep, tr, sort, uniq</li>                    
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li><a href="1/comandos.html">Comandos básicos/importantes</a></li>
+                    <li><a href="1/linea_de_comandos-ejercicios.html">Ejercicios</a></li>
+                    <br>
+                    <strong>Recursos adicionales:</strong>
+                    <li><a href="https://learnbyexample.gitbooks.io/linux-command-line/content/Command_Line_Introduction.html">Intro línea de comandos</a></li>
+                    <li><a href="https://www.cs.upc.edu/~padro/Unixforpoets.pdf">Unix for poets</a></li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>14 febrero</td>
+            <td>1</td>
+            <td>Introducción a Python; primeros pasos, variables, leyendo y escribiendo archivos</td>
+            <td>
+                <ul>
+                    <li><a href="01_intro_python.html">Intro Python</a></li>
+                    <li><a href="https://docs.python.org/es/3/tutorial/index.html">Tutorial Python</a></li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>21 febrero</td>
+            <td>2</td>
+            <td>Types y las estructuras de datos: string, int, float, list, dict, set</td>
+        </tr>
+        <tr>
+            <td>28 febrero</td>
+            <td>2</td>
+            <td>Types y las estructuras de datos: For loops, contando frecuencias</td>
+        </tr>
+        <tr>
+            <td>7 marzo</td>
+            <td>2</td>
+            <td>Types y las estructuras de datos: collections, comprehensions</td>
+        </tr>
+        <tr>
+            <td>14 marzo</td>
+            <td>3</td>
+            <td>Las funciones y las clases</td>
+        </tr>
+        <tr>
+            <td>21 marzo</td>
+            <td>3</td>
+            <td>Modules y bibliotecas; como importar dependencias en Python; Python standard library</td>
+        </tr>
+        <tr>
+            <td>28 marzo</td>
+            <td>3</td>
+            <td>Pandas; Matplotlib, Seaborn</td>
+        </tr>
+        <tr>
+            <td>4 abril</td>
+            <td>4</td>
+            <td>Cadenas de texto: codificación/decodificación; operaciones simples: replace, strip, split, count, index, lower/upper/title </td>
+        </tr>
+        <tr>
+            <td>11 abril</td>
+            <td>4</td>
+            <td>Expresiones regulares</td>
+        </tr>
+        <tr>
+            <td>18 abril</td>
+            <td>4</td>
+            <td>Más expresiones regulares</td>
+        </tr>
+        <tr>
+            <td>25 abril</td>
+            <td>5</td>
+            <td>Trabajo práctico:xml, speach, y/o parselmouth</td>
+        </tr>
+        <tr>
+            <td>2 mayo</td>
+            <td>5</td>
+            <td>Trabajo práctico: trabajando con audio</td>
+        </tr>
+        <tr>
+            <td>9 mayo</td>
+            <td>5</td>
+            <td>Trabajo práctico: proyectos personales de los alumnos</td>
+        </tr>
+        <tr>
+            <td>16 mayo</td>
+            <td>5</td>
+            <td>Trabajo práctico: proyectos personales de los alumnos</td>
+        </tr>
+    </table>
+
+    <h2>Recursos Recomendados</h2>
+    <ul>
+        <li><a href="https://web.stanford.edu/~jurafsky/slp3/">Speech and Language Processing</a></li>
+        <li><a href="https://www.gelbukh.com/clbook/">Computational Linguistics (Bolshakov and Gelbukh)</a></li>
+        <li><a href="https://docs.python.org/3/">Python Documentation</a></li>
+    </ul>
+
+    <h2>Evaluación</h2>
+    <ul>
+        <li>Participación en clase</li>
+    </ul>
+
+    <h2>Sobre el uso de la inteligencia artificial</h2>
+    <p>Muchos de los ejercicios que vemos en este curso, particularmente en la primera parte del semestre donde estamos viendo lo más básico, se podrán hacer con la ayuda de la inteligencia artificial. Sin embargo yo les recomiendo que eviten esto durante el curso. Es importante intentar hacer las cosas por su cuenta, aunque al principio sea más difícil. Si tienen dudas, no duden en preguntarme.</p>  
+</body>
+</html>
