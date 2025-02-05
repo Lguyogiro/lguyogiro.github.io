@@ -86,7 +86,10 @@
 <div style="margin-left: 20px;">
     <p>Muestra las últimas líneas de un archivo. Por ejemplo, <pre><code>tail -n 10 archivo.txt</code></pre> mostrará las últimas 10 líneas del archivo.</p>
 </div>
-
+<h3>echo</h3>
+<div style="margin-left: 20px;">
+    <p>Muestra text en la pantalla. Por ejemplo, <pre><code>echo "Hola, mundo!"</code></pre> mostrará el mensaje "Hola, mundo!"</p>
+</div>
 <h3>wc</h3>
 <div style="margin-left: 20px;">
     <p>Cuenta líneas, palabras y caracteres en archivos de texto. Por ejemplo, <pre><code>wc archivo.txt</code></pre> mostrará el número de líneas, palabras y caracteres en el archivo.</p>
@@ -105,6 +108,13 @@
 <h3>tr</h3>
 <div style="margin-left: 20px;">
     <p>Traduce o elimina caracteres. Por ejemplo, <pre><code>echo "texto" | tr 'a-z' 'A-Z'</code></pre> convertirá el texto a mayúsculas.</p>
+    <p>Una de las limitaciones de "tr" es que no puede manejar patrones complejos, y trabaja al nivel de "byte" en lugar de "caracteres" (entonces si la lengua en la que estás trabajando tiene caracteres como "í", "é", "ü", etc., "tr" no los manejará correctamente).</p>
+</div>
+
+<h3>sed</h3>
+<div style="margin-left: 20px;">
+    <p>Editar text línea por línea. Un ejemplo:  <pre><code>sed 's/patrón/reemplazo/' archivo.txt</code></pre> reemplazará el patrón especificado en el archivo.</p>
+    <p>`sed` es una herrmanienta super poderosa para manipular texto. Veremos más ejemplos cuando veamos expresiones regulares..</p>
 </div>
 
 <h3>sort</h3>

@@ -29,67 +29,67 @@
     <ol>
         <li>Abre tu terminal, y averigua tu Path actual
             <span class="reveal" onclick="toggleCommand(this)">&#x2795;</span>
-            <pre style="display:none;">pwd</pre>
+            <!-- <pre style="display:none;">pwd</pre> -->
         </li>
         <hr>
         <li>Crea un directorio que corresponde a este curso (p.ej "curso_progr"). En ese directorio vamos a guardar todos los trabajos que hacemos durante el semester.
             <span class="reveal" onclick="toggleCommand(this)">&#x2795;</span>
-            <pre style="display:none;">mkdir curso_progr</pre>
+            <!-- <pre style="display:none;">mkdir curso_progr</pre> -->
         </li>
         <hr>
         <li>Entra en ese directorio
             <span class="reveal" onclick="toggleCommand(this)">&#x2795;</span>
-            <pre style="display:none;">cd curso_progr</pre>
+            <!-- <pre style="display:none;">cd curso_progr</pre> -->
         </li>
         <hr>
         <li>Crea otro, subdirectorio, aquí, que corresponde a esta primera sesion (p.ej. "sesion1")
             <span class="reveal" onclick="toggleCommand(this)">&#x2795;</span>
-            <pre style="display:none;">mkdir sesion1</pre>
+            <!-- <pre style="display:none;">mkdir sesion1</pre> -->
         </li>
         <hr>
         <li>Entra en ese subdirectorio
             <span class="reveal" onclick="toggleCommand(this)">&#x2795;</span>
-            <pre style="display:none;">cd sesion1</pre>
+            <!-- <pre style="display:none;">cd sesion1</pre> -->
         </li>
         <hr>
         <li>Regresa al directorio del curso
             <span class="reveal" onclick="toggleCommand(this)">&#x2795;</span>
-            <pre style="display:none;">cd ..</pre>
+            <!-- <pre style="display:none;">cd ..</pre> -->
         </li>
         <hr>
         <li>Crea un archivo vacío llamado "ejemplo.txt"
             <span class="reveal" onclick="toggleCommand(this)">&#x2795;</span>
-            <pre style="display:none;">touch ejemplo.txt</pre>
+            <!-- <pre style="display:none;">touch ejemplo.txt</pre> -->
         </li>
         <hr>
         <li>muevelo al subdirectorio ("sesion1")
             <span class="reveal" onclick="toggleCommand(this)">&#x2795;</span>
-            <pre style="display:none;">mv ejemplo.txt sesion1/</pre>
+            <!-- <pre style="display:none;">mv ejemplo.txt sesion1/</pre> -->
         </li>
         <hr>
         <li>Abre el archivo con un editor de texto (p. ej. nano, vim, emacs), y escribe lo que quieras ahí (lo de 5-10 líneas)
             <span class="reveal" onclick="toggleCommand(this)">&#x2795;</span>
-            <pre style="display:none;">nano sesion1/ejemplo.txt</pre>
+            <!-- <pre style="display:none;">nano sesion1/ejemplo.txt</pre> -->
         </li>
         <hr>
         <li>Guarda y cierra el archivo
             <span class="reveal" onclick="toggleCommand(this)">&#x2795;</span>
-            <pre style="display:none;">(Ctrl+X, Y, Enter in nano)</pre>
+            <!-- <pre style="display:none;">(Ctrl+X, Y, Enter in nano)</pre> -->
         </li>
         <hr>
         <li>Imprime el contenido del archivo en la terminal
             <span class="reveal" onclick="toggleCommand(this)">&#x2795;</span>
-            <pre style="display:none;">cat ejemplo.txt</pre>
+            <!-- <pre style="display:none;">cat ejemplo.txt</pre> -->
         </li>
         <hr>
         <li>Investiga el número de líneas, palabras, y caracteres en el archivo
             <span class="reveal" onclick="toggleCommand(this)">&#x2795;</span>
-            <pre style="display:none;">wc ejemplo.txt</pre>
+            <!-- <pre style="display:none;">wc ejemplo.txt</pre> -->
         </li>
         <hr>
         <li>Haz una copia del archivo en el mismo directorio con un nombre diferente
             <span class="reveal" onclick="toggleCommand(this)">&#x2795;</span>
-            <pre style="display:none;">cp ejemplo.txt ejemplo_copia.txt</pre>
+            <!-- <pre style="display:none;">cp ejemplo.txt ejemplo_copia.txt</pre> -->
         </li>
     </ol>
     <h2>Parte 2</h2>
@@ -105,42 +105,42 @@
     <ol>
         <li>Descarga el corpus <i>tsunkua</i> <a href="https://raw.githubusercontent.com/ElotlMX/py-elotl/refs/heads/master/elotl/corpora/tsunkua.csv">aquí</a>
             <span class="reveal" onclick="toggleCommand(this)">&#x2795;</span>
-            <pre style="display:none;">wget https://raw.githubusercontent.com/ElotlMX/py-elotl/refs/heads/master/elotl/corpora/tsunkua.csv</pre>
+            <!-- <pre style="display:none;">wget https://raw.githubusercontent.com/ElotlMX/py-elotl/refs/heads/master/elotl/corpora/tsunkua.csv</pre> -->
         </li>
         <hr>
         <li>Investiga el número de líneas en el archivo
             <span class="reveal" onclick="toggleCommand(this)">&#x2795;</span>
-            <pre style="display:none;">wc -l tsunkua.csv</pre>
+            <!-- <pre style="display:none;">wc -l tsunkua.csv</pre> -->
         </li>
         <hr>
         <li>Investiga el número de palabras en el archivo
             <span class="reveal" onclick="toggleCommand(this)">&#x2795;</span>
-            <pre style="display:none;">wc -w tsunkua.csv</pre>
+            <!-- <pre style="display:none;">wc -w tsunkua.csv</pre> -->
         </li>
         <hr>
         <li>Imprime las primeras 5 líneas del archivo, notando el formato
             <span class="reveal" onclick="toggleCommand(this)">&#x2795;</span>
-            <pre style="display:none;">head -n 5 tsunkua.csv</pre>
+            <!-- <pre style="display:none;">head -n 5 tsunkua.csv</pre> -->
         </li>
         <hr>
         <li>Imprime las últimas 5 líneas del archivo
             <span class="reveal" onclick="toggleCommand(this)">&#x2795;</span>
-            <pre style="display:none;">tail -n 5 tsunkua.csv</pre>
+            <!-- <pre style="display:none;">tail -n 5 tsunkua.csv</pre> -->
         </li>
         <hr>
         <li>Encuentra sólo las líneas que son de "Visión de los vencidos (hñahñu)"
             <span class="reveal" onclick="toggleCommand(this)">&#x2795;</span>
-            <pre style="display:none;">grep "Visión de los vencidos (hñahñu)" tsunkua.csv</pre>
+            <!-- <pre style="display:none;">grep "Visión de los vencidos (hñahñu)" tsunkua.csv</pre> -->
         </li>
         <hr>
         <li>Imprime sólo los nombres de las variantes (tercera columna)
             <span class="reveal" onclick="toggleCommand(this)">&#x2795;</span>
-            <pre style="display:none;">csvcut -c3 tsunkua.csv</pre>
+            <!-- <pre style="display:none;">csvcut -c3 tsunkua.csv</pre> -->
         </li>
         <hr>
         <li>Investiga el número de palabras y carácteres del puro texto Otomí (segunda columna) <bold>hint: usa "|" para mandar la salida de un comando a otro</bold>
             <span class="reveal" onclick="toggleCommand(this)">&#x2795;</span>
-            <pre style="display:none;">csvcut -c2 tsunkua.csv | wc</pre>
+            <!-- <pre style="display:none;">csvcut -c2 tsunkua.csv | wc</pre> -->
         </li>
     </ol>
     <h2>Parte 3</h2>
@@ -157,55 +157,32 @@
     <ol>
         <li>Escribe el puro texto Otomí (columna 2) a un archivo llamado "otomi.txt", y el Español (columna 1) a un archivo llamado "es.txt"
             <span class="reveal" onclick="toggleCommand(this)">&#x2795;</span>
-            <pre style="display:none;">csvcut -c2 tsunkua.csv > otomi.txt; csvcut -c1 tsunkua.csv > es.txt</pre>
+            <!-- <pre style="display:none;">csvcut -c2 tsunkua.csv > otomi.txt; csvcut -c1 tsunkua.csv > es.txt</pre> -->
         </li>
         <hr>
         <li>En otomi.txt, ¿Cuántas líneas tienen la secuencia "xo"? ¿Cuántas líneas no contienen esa secuencia?
             <span class="reveal" onclick="toggleCommand(this)">&#x2795;</span>
-            <pre style="display:none;">grep -c "xo" otomi.txt; grep -vc "xo" otomi.txt</pre><br>
+            <!-- <pre style="display:none;">grep -c "xo" otomi.txt; grep -vc "xo" otomi.txt</pre> --><br>
             
         </li>
         <hr>
         <li>En otomi.txt, ¿Cuántas líneas tienen las secuencia "xo" <bold>o</bold> "na"? ¿Cuántas no?
             <span class="reveal" onclick="toggleCommand(this)">&#x2795;</span>
-            <pre style="display:none;">grep -c -e "xo" -e "na" otomi.txt; grep -cv -e "xo" -e "na" otomi.txt</pre>
+            <!-- <pre style="display:none;">grep -c -e "xo" -e "na" otomi.txt; grep -cv -e "xo" -e "na" otomi.txt</pre> -->
         </li>
         <hr>
         <li>Imprime cada palabra en una línea distinta
             <span class="reveal" onclick="toggleCommand(this)">&#x2795;</span>
-            <pre style="display:none;">cat otomi.txt | tr ' ' '\n' </pre>
+            <!-- <pre style="display:none;">cat otomi.txt | tr ' ' '\n' </pre> -->
         </li>
         <hr>
         <li>Ahora haz lo mismo, pero convierte todo a minúsculas primero
             <span class="reveal" onclick="toggleCommand(this)">&#x2795;</span>
-            <pre style="display:none;">cat otomi.txt | tr ' ' '\n' | tr '[:upper:]' '[:lower:]'</pre>
+            <!-- <pre style="display:none;">cat otomi.txt | tr ' ' '\n' | tr '[:upper:]' '[:lower:]'</pre> -->
         </li>
         <hr>
-        <li>¿Cuál es el tamaño del vocabulario (número de palabras distintas) del otomí y del español? Tomémos en cuenta </li>
+        <li>¿Cuál es el tamaño del vocabulario (número de palabras distintas) del otomí y del español? Tomémos en cuenta las mayúsculas/minúsculas y la puntuación
+        <li>Crea un archivo llamado "otomi_español.tsv" que contiene el texto en Otomí en la primera columna y el español en la segunda columna, separadas por un tabulador
+            <span class="reveal" onclick="toggleCommand(this)">&#x2795;</span>
+            <!-- <pre style="display:none;">paste otomi.txt es.txt > otomi_español.tsv</pre> -->
     </ol>
-    <style>
-        li {
-            margin: 10px 0;
-        }
-        .reveal {
-            float: right;
-            cursor: pointer;
-            color: gray;
-        }
-    </style>
-
-
-    <script>
-    function toggleCommand(element) {
-        var command = element.nextElementSibling;
-        if (command.style.display === 'none') {
-            command.style.display = 'block';
-        } else {
-            command.style.display = 'none';
-        }
-    }
-    </script>
-
-
-  </body>
-  </html>
