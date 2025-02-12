@@ -1,0 +1,45 @@
+<h2>Uso del intérprete</h2>
+<p>Antes de escribir programas en Python, vamos a abrir y usar el intérprete. Puedes abrirlo desde la línea de comandos con el comando <code>python</code>. Por ejemplo:</p>
+<pre><code>python</code></pre>
+
+<p>Una vez que estés dentro del intérprete, puedes escribir comandos y ver los resultados inmediatamente.</p>
+
+<h2>Imprimir texto</h2>
+<p>Una de las cosas más básicas que puedes hacer en Python es imprimir texto en la pantalla. Para hacer esto, utilizas la función <code>print()</code>. Por ejemplo:</p>
+<pre><code>print("Hola, mundo")</code></pre>
+<p>Esto imprimirá "Hola, mundo" en la pantalla.</p>
+
+<h2>Variables simples</h2>
+<p>En Python, puedes almacenar valores en variables. Una variable es un nombre que se asigna a un valor. Por ejemplo:</p>
+<pre><code>nombre = "Robert"
+edad = 36
+print("Mi nombre es", nombre, "y tengo", edad, "años")</code></pre>
+<p>Esto imprimirá "Mi nombre es Juan y tengo 25 años". Puedes cambiar el valor de una variable en cualquier momento.</p>
+
+
+<h2>Lectura y escritura de archivos de texto</h2>
+<p>Python también te permite leer y escribir archivos de texto con facilidad. Por ejemplo, para leer el contenido de un archivo llamado <code>example.txt</code>, puedes usar la 
+función <code>open()</code>:</p>
+<pre><code>archivo = open("example.txt", "r")
+contenido = archivo.read()
+print(contenido)
+archivo.close()</code></pre>
+<p>Esto abrirá el archivo <code>example.txt</code> en modo lectura (<code>"r"</code>), leerá su contenido y lo imprimirá en la pantalla. Luego, cierra el archivo con 
+<code>close()</code>.</p>
+
+<p>Para escribir texto en un archivo, puedes usar la función <code>open()</code> con el modo <code>"w"</code>:</p>
+<pre><code>archivo = open("example.txt", "w")
+archivo.write("Este es un ejemplo de texto escrito en Python")
+archivo.close()</code></pre>
+<p>Esto creará un nuevo archivo llamado <code>example.txt</code> y escribirá el texto "Este es un ejemplo de texto escrito en Python" en él.</p>
+
+<h2>Corriendo un programa en Python</h2>
+<p>Para correr un programa en Python, tienes que escribir el código en un archivo con extensión <code>.py</code> y luego correrlo desde la línea de comandos usando el comando <code>python "programa".py</code>. Por ejemplo, si guardas el
+código anterior en un archivo llamado <code>mi_programa.py</code>, puedes correrlo con el comando:</p>
+<pre><code>python mi_programa.py</code></pre>
+
+
+<h2>Ejercicios</h2>
+<ol>
+    <li>Usando un editor de texto y los comandos que vimos la semana pasada, crea dos archivos: uno llamado "nombre.txt" con tu nombre y otro llamado "edad.txt" con tu edad. Luego, escribe un programa en Python que lea estos archivos y los imprima en la pantalla.</li>
+    <li>Ahora, imprime "Mi nombre es NOMBRE, y en el año 2078 tendré EDAD años" en la pantalla, donde NOMBRE es un valor leído del archivo, y EDAD es la edad del archivo ajustado al año especificado.</li>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos básicos en Python</title>
+</head>
+<body>
+    <h1>Tipos básicos en Python</h1>
+    <p>En Python, hay varios tipos de datos que puedes utilizar para almacenar y manipular información. A continuación, presento algunos de los más comunes.</p>
+
+    <p>Con cualquier valor, si quieres saber qué tipo de dato es, puedes usar la función <code>type()</code>. Por ejemplo:</p>
+    <pre>
+        <code>
+        nombre = "Robert"
+        print(type(nombre))  # Salida: &lt;class 'str'&gt;
+        </code>
+    </pre>    
+    <p>También puedes usar la función <code>isinstance()</code> para verificar si un valor es de un tipo de dato específico. Por ejemplo:</p>
+<pre>
+<code>
+edad = 25
+print(isinstance(edad, int))  # Salida: True
+print(isinstance(edad, str))  # Salida: False
+</code>
+</pre>
+
+
+    <h2>Números enteros (int)</h2>
+    <p>Los números enteros son números sin parte decimal. Se pueden representar utilizando el tipo int.</p>
+<pre>
+<code>
+edad = 25
+año = 2024
+print(edad)   # Salida: 25
+print(año)    # Salida: 2024
+</code>
+</pre>
+
+    <p>Los números enteros se pueden sumar, restar, multiplicar y dividir como se muestra en el siguiente ejemplo:</p>
+<pre>
+<code>
+a = 10
+b = 5
+suma = a + b
+print(suma)          # Salida: 15
+
+resta = a - b
+print(resta)         # Salida: 5
+
+multiplicacion = a * b
+print(multiplicacion) # Salida: 50
+
+division = a / b
+print(division)      # Salida: 2.0
+</code>
+</pre>
+
+    <h2>Números decimales (float)</h2>
+    <p>Los números decimales son números que tienen una parte decimal. Se pueden representar utilizando el tipo float.</p>
+    <p>También se pueden sumar, restar, multiplicar y dividir.</p>
+
+<pre>
+<code>
+altura = 1.75
+peso = 70.5
+imc = peso / (altura ** 2)
+print(altura)  # Salida: 1.75
+print(peso)    # Salida: 70.5
+print(imc)     # Salida: 23.02
+</code>
+</pre>
+<p>En el caso de la división, el resultado es un número decimal, incluso si el resultado es un número entero.</p>
+<p>También podemos obtener el residuo de una división con el operador `%`:</p>
+<pre>
+<code>
+residuo = 10 % 3
+print(residuo)  # Salida: 1
+</code>
+</pre>
+
+    <h2>Cadenas (string)</h2>
+    <p>Las cadenas son secuencias de caracteres que se pueden almacenar en variables. Se definen utilizando comillas simples o dobles.</p>
+<pre>
+<code>
+nombre = "Robert"
+edad = '36'
+print(nombre, edad)  # Salida: Robert 36 
+</code>
+</pre>
+
+    <p>Hay muchas operaciones que podemos hacer con los strings en Python. Verémos esto en mas detalle en un par de semanas.</p>
+    <p>Por ejemplo, podemos concatenar strings:</p>
+<pre>
+<code>
+saludo = "Hola, " + nombre
+print(saludo)  # Salida: Hola, Robert
+</code>
+</pre>
+    <p>Podemos convertir un número a string:</p>
+<pre>
+<code>
+edad = 25
+print("Tengo " + str(edad) + " años")  # Salida: Tengo 25 años
+</code>
+</pre>
+    <p>Y si un string es un numero, podemos convertirlo a un número entero o decimal:</p>
+<pre>
+<code>
+numero = "25"
+print(numero.isdigit())  # Salida: True
+print(int(numero) + 5)  # Salida: 30
+print(float(numero) + 5.5)  # Salida: 30.5
+</code>
+</pre>
+    <p>para acceder a un caracter específico de un string, usamos los indices. Los indices empiezan en 0, y los indices negativos empiezan desde la derecha.:</p>
+<pre>
+<code>
+print(nombre[0])  # Salida: R
+print(nombre[1])  # Salida: o
+print(nombre[-1])  # Salida: t
+</code>
+</pre>
+
+    <h2>Listas (list)</h2>
+    <p>Las listas son colecciones de elementos que se pueden almacenar en una variable. Se definen utilizando corchetes [] y se separan con comas.</p>
+<pre>
+<code>
+frutas = ["manzana", "banana", "naranja"]
+print(frutas)  # Salida: ['manzana', 'banana', 'naranja']
+</code>
+</pre>
+<p>Usamos los `indices` para acceder a los elementos de una lista.</p>
+<pre>
+<code> 
+print(frutas[0])  # Salida: manzana
+print(frutas[1])  # Salida: banana
+print(frutas[1])  # Salida: banana
+print(frutas[-1])  # Salida: naranja
+</code>
+</pre>
+
+<p>Si tienes un archivo de textos y quieres segmentarlo en oraciones, puedes almacenarlas en una lista. 
+También son útiles las listas cuando queremos segmentar una frase en palabras. usamos el método `split()`</p>
+<pre>
+<code>
+texto = "Este es un ejemplo de texto. Este es otro ejemplo."
+oraciones = texto.split(".")
+print(oraciones)  # Salida: ['Este es un ejemplo de texto en Python', ' Este es otro ejemplo', '']
+
+palabras = oraciones[0].split(" ")
+print(palabras)  # Salida: ['Este', 'es', 'un', 'ejemplo', 'de', 'texto', 'en', 'Python']
+</code>
+</pre>
+
+    <p>Podemos agregar elementos a una lista con el método `append()`, y concatenar listas con el método `extend()`</p>
+<pre>
+<code>
+frutas.append("pera")
+print(frutas)  # Salida: ['manzana', 'banana', 'naranja', 'pera']
+frutas.extend(["uva", "sandía"])
+print(frutas)  # Salida: ['manzana', 'banana', 'naranja', 'pera', 'uva', 'sandía']
+</code>
+</pre>
+
+    <h2>Diccionarios (Dict)</h2>
+    <p>Los diccionarios son colecciones de pares clave-valor que se pueden almacenar en una variable. Se definen utilizando llaves {} y colon : y se separan con comas.</p>
+    <p>Los diccionarios son útiles cuando queremos almacenar información que tiene una estructura clave-valor, como pares de traducciones</p>
+    <p>para acceder a un valor, usamos la clave correspondiente:</p>
+<pre>
+<code>
+traducciones = {"apple": "manzana", "banana": "banana", "orange": "naranja"}
+print(traducciones["apple"])  # Salida: manzana
+</code>
+</pre>
+
+<pre>
+<code>
+persona = {"nombre": "Juan", "edad": 25}
+print(persona)  # Salida: {'nombre': 'Juan', 'edad': 25}
+</code>
+</pre>
+
+    <p>Podemos agregar elementos a un diccionario con la sintaxis `diccionario[nueva_clave] = nuevo_valor`</p>
+<pre>
+<code>
+persona["ciudad"] = "México"
+print(persona)  # Salida: {'nombre': 'Juan', 'edad': 25, 'ciudad': 'México'}
+</code>
+</pre>
+<p>Si intentamos agregar una clave que ya existe, el valor se actualiza:</p>
+<pre>
+<code>
+persona["edad"] = 26
+print(persona)  # Salida: {'nombre': 'Juan', 'edad': 26, 'ciudad': 'México'}
+</code>
+</pre>
+
+<p> Si queremos borrar una entrada en el diccionario (o sea, una clave y su valor correspondiente), usamos `del`:</p>
+<pre>
+<code>
+del persona["ciudad"]
+print(persona)  # Salida: {'nombre': 'Juan', 'edad': 26}
+</code>
+</pre>
+
+    <h2>Conjuntos (Set)</h2>
+    <p>Los conjuntos son colecciones de elementos únicos que se pueden almacenar en una variable. Se definen utilizando llaves {} y se separan con comas.</p>
+    <p>Los conjuntos son útiles cuando queremos almacenar elementos únicos, como colores o palabras, y averiguar la pertenencia de un elemento a un conjunto.</p>
+<pre>
+<code>
+colores = {"rojo", "azul", "verde"}
+print("rojo" in colores)  # Salida: True
+</code>
+</pre>
+<p>Podemos convertir una lista a un conjunto con la función `set()`:</p>
+<pre>
+<code>
+numeros = [1, 2, 3, 4, 5, 1, 2, 3]
+numeros_unicos = set(numeros)
+print(numeros_unicos)  # Salida: {1, 2, 3, 4, 5}
+</code>
+</pre>
+
+    <h2>Booleanos (Bool)</h2>
+    <p>Los booleanos son valores que representan verdadero o falso. Se pueden representar utilizando los valores True y False.</p>
+    <p>Las siguientes expresiones nos devolverán valores booleanos:</p>
+<pre> 
+<code>
+5 > 3  # Salida: True
+"orale" == "órale" # Salida: False
+100 == (10*10) # Salida: True
+</code>
+</pre>
+    
+        <h2>None</h2>
+        <p>None es un valor especial en Python que representa la ausencia de un valor. Se puede utilizar para inicializar variables o para verificar si una variable tiene un valor.</p>
+
+</body>
+</html>
