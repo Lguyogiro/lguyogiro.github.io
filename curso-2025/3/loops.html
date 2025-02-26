@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops (Bucles) en Python</title>
+</head>
+<body>
+    <h1>Loops (Bucles) en Python</h1>
+    <p>Los bucles son estructuras de control que permiten repetir un bloque de código varias veces. En Python, hay dos tipos de bucles: <code>for</code> y <code>while</code>.</p>
+
+    <h2>Bucle <code>for</code></h2>
+    <p>El bucle <code>for</code> se utiliza para iterar sobre una secuencia (como una lista, tupla, diccionario, o cadena) y ejecutar un bloque de código una vez para cada elemento de la secuencia. Por ejemplo:</p>
+    <pre>
+        <code>
+        colores = ["rojo", "verde", "azul"]
+        for color in colores:
+            print(color)
+        </code>
+    </pre>
+    <p>En este caso, el bucle <code>for</code> itera sobre la lista <code>colores</code> e imprime cada color en una línea separada.</p>
+    <p>También se puede iterar sobre un string:</p>
+    <pre>
+        <code>
+        for letra in "hola":
+            print(letra)
+        </code>
+        </pre>
+    <h3>Ejercicios</h3>
+    <ol>
+        <li>Dado la siguiente lista de números: <code>numeros = [1, 2, 3, 4, 5]</code>, escribe un bucle <code>for</code> que imprima el cuadrado de cada número.</li>
+        <li>Usando curl o wget, descarga el archivo <a href="https://robertpugh.site/curso-2025/3/codewords.txt">https://robertpugh.site/curso-2025/3/codewords.txt</a>, léelo y guarda el contenido en una lista (qué cada línea sea un elemento en la lista). Itera sobre la lista, y por cada palabra, si contiene una letra mayúscula, imprímela.</li>
+        <li>Crea un diccionario con las frecuencias de las palabras en quc_palabras.txt. Ahora itera sobre todas las palabras en el diccionario, y si su frecuencia es mayor a 10, imprime la palabra.</li>
+    </ol>
+
+    <h2>Bucle <code>while</code></h2>
+    <p>El bucle <code>while</code> se utiliza para repetir un bloque de código mientras una condición sea verdadera. Por ejemplo:</p>
+    <pre>
+        <code>
+        i = 1
+        while i < 6:
+            print(i)
+            i += 1
+        </code>
+    </pre>
+    <p>En este caso, el bucle <code>while</code> imprime los números del 1 al 5.</p>
+    <p>Es importante tener cuidado con los bucles <code>while</code>, ya que si la condición nunca se vuelve falsa, el bucle se ejecutará para siempre.</p>
+    <h3>Ejercicios</h3>
+    <ol>
+        <li>Haz un programa que imprime todos los números del 1 al 10 usando un bucle while</li>
+        <li>Haz un programa donde tú excoges un número secreto y lo guardas en una variable. Ahora pide un numero al usuario. Si lo adivina correctamente imprime "felicidades!" Si no, vuelve a pedir otro número. Usa un bucle while.</li>
+    </ol>
+
+<h2>continue y break en los bucles</h2>
+<p>En Python, puedes usar las palabras clave <code>continue</code> y <code>break</code> para controlar el flujo de los bucles.</p>
+<p><code>continue</code> se usa para saltar a la siguiente iteración del bucle, mientras que <code>break</code> se usa para salir del bucle por completo.</p>
+<p>Por ejemplo:</p>
+<pre>
+    <code>
+    mi_contraseña = "1234"
+    intentos = ["H3llo", "root", "1234", "password", "admin"]
+    for intento in intentos:
+        if intento == mi_contraseña:
+            print("Contraseña correcta!")
+            break
+        else:
+            continue
+    </code>
+</body>
+</html>
