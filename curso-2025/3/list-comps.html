@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Comprehensions</title>
+</head>
+<body>
+    <p>Ya han aprendido sobre los bucles en Python. Ahora, vamos a ver una forma más concisa y elegante de crear listas: <strong>list comprehensions</strong>.</p>
+    <h2>¿Qué son las list comprehensions?</h2>
+    <p>Las list comprehensions son una forma concisa de crear listas en Python. Son muy útiles cuando necesitas crear una lista basada en otra lista o secuencia.</p>
+    <p>La sintaxis de una list comprehension es la siguiente:</p>
+    <pre>
+        <code>
+        nueva_lista = [expresion for elemento in secuencia]
+        </code>
+    </pre>
+    <p>Aquí la "expresión" puede realizar operaciones y/o transformaciones sobre el elemento (aquí `elemento` es la variable de iteración que tú defines para referirte a cada elemento en la lista).</p>
+    <p>Por ejemplo, si tienes una lista de números y quieres crear una nueva lista con el cuadrado de cada número, puedes hacerlo con una list comprehension.</p>
+    <pre>
+        <code>
+        numeros = [1, 2, 3, 4, 5]
+        cuadrados = [x ** 2 for x in numeros]
+        print(cuadrados)
+        </code> 
+    </pre>
+    <p>También podemos incluir condiciones en las list comprehensions. Por ejemplo, si queremos crear una lista con los números pares de una lista original, podemos hacerlo de la siguiente manera:</p>
+    <pre>
+        <code>
+        numeros = [1, 2, 3, 4, 5]
+        pares = [x for x in numeros if x % 2 == 0]
+        print(pares)
+        </code>
+    </pre>
+
+    <h2>Convertir un bucle for en una list comprehension</h2>
+    <p>El siguiente bucle for:</p>
+    <pre>
+        <code>
+        cuadrados = []
+        for x in range(1, 6):
+            cuadrados.append(x ** 2)
+        print(cuadrados)
+        </code>
+    </pre>
+    <p>Se puede reescribir como una list comprehension:</p>
+    <pre>
+        <code>
+        cuadrados = [x ** 2 for x in range(1, 6)]
+        print(cuadrados)
+        </code>
+    </pre>
+
+    
+</body>
+</html>

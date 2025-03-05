@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadenas de Texto en Python</title>
+</head>
+<body>
+    <h1>Cadenas de Texto en Python</h1>
+    <p>En este documento, exploraremos varias operaciones comunes que se pueden realizar con cadenas de texto en Python.</p>
+
+    <h2>Strip</h2>
+    <p>El método <code>strip</code> se utiliza para eliminar espacios en blanco al principio y al final de una cadena. Por ejemplo:</p>
+    <pre><code>
+cadena = "   Hola, mundo!   "
+cadena_limpia = cadena.strip(" ")
+print(cadena_limpia)  # Hola, mundo!
+    </code></pre>
+
+    <h2>Split</h2>
+    <p>El método <code>split</code> se utiliza para dividir una cadena en una lista de subcadenas. Por ejemplo:</p>
+    <pre><code>
+cadena = "Hola, mundo! Bienvenidos a Python."
+partes = cadena.split()
+print(partes)  # ['Hola,', 'mundo!', 'Bienvenidos', 'a', 'Python.']
+    </code></pre>
+    <p>Podemos especificar un delimitador para dividir la cadena, y también cuántas divisiones queremos hacer:</p>
+    <pre><code>
+cadena = "Hola, mundo, Bienvenidos, a Python."
+partes = cadena.split(",")  # ['Hola', ' mundo', ' Bienvenidos', ' a Python.']
+print(partes)
+    </code></pre>
+    <p>En este caso, la cadena se divide en cuatro partes, utilizando la coma como delimitador.</p>
+    <p>Si solo queremos hacer una sóla división, podemos especificar el número de divisiones:</p>
+    <pre><code>
+partes = cadena.split("!", 1)
+print(partes)  # ['Hola, mundo', ' Bienvenidos! a Python.']
+
+    <h2>Count</h2>
+    <p>El método <code>count</code> se utiliza para contar el número de veces que aparece una subcadena en una cadena. Por ejemplo:</p>
+    <pre><code>
+cadena = "Hola, mundo! Hola a todos!"
+conteo = cadena.count("Hola")
+print(conteo)  # 2
+    </code></pre>
+
+    <h2>Index</h2>
+    <p>El método <code>index</code> se utiliza para encontrar la posición de una subcadena en una cadena. Por ejemplo:</p>
+    <pre><code>
+cadena = "Hola, mundo!"
+posicion = cadena.index("mundo")
+print(posicion)  # 6
+    </code></pre>
+
+    <h2>Lower/Upper/Title</h2>
+    <p>Los métodos <code>lower</code>, <code>upper</code> y <code>title</code> se utilizan para cambiar el caso de las letras en una cadena. Por ejemplo:</p>
+    <pre><code>
+cadena = "Hola, Mundo!"
+
+# Convertir a minúsculas
+minusculas = cadena.lower()
+print(minusculas)  # hola, mundo!
+
+# Convertir a mayúsculas
+mayusculas = cadena.upper()
+print(mayusculas)  # HOLA, MUNDO!
+
+# Convertir a título
+titulo = cadena.title()
+print(titulo)  # Hola, Mundo!
+    </code></pre>
+    <p>Prabar checar si una cadena tiene puras mayúsculas, puras minúsculas, o si tiene la primera letra en mayúscula y el resto en minúsculas, podemos usar los métodos <code>isupper</code>, <code>islower</code> y <code>istitle</code>, respectivamente.</p>
+    <pre><code>
+cadena = "HOLA, MUNDO!"
+print(cadena.isupper())  # True
+
+cadena = "hola, mundo!"
+print(cadena.islower())  # True
+
+cadena = "Hola, mundo!"
+print(cadena.istitle())  # True
+    </code></pre>
+
+<h2>Startswith/Endswith</h2>
+<p>Los métodos <code>startswith</code> y <code>endswith</code> se utilizan para verificar si una cadena comienza o termina con una subcadena específica. Por ejemplo:</p>
+<pre><code>
+cadena = "Hola, mundo!"
+print(cadena.startswith("Hola"))  # True
+print(cadena.endswith("mundo!"))  # True
+</code></pre>
+
+<h2>Ejercicios</h2>
+<ol>
+    <li>Escribe un programa que le pida al usuario una cadena de texto y luego imprima la cadena en mayúsculas, minúsculas y con la primera letra en mayúscula.</li>
+    <li>Escribe un programa que lea una cadena de texto y cuente el número de palabras en la cadena.</li>
+    <li>Dada la cadena "Hola, ahorita salgo tengo qué comer primero", y el diccionario de traducciones léxicas {"comer": "eat", "tengo qué": "I have to", "salgo": "I head out", "Hola": "Hello", "primero": "first"}, escribe un programa que traduzca la cadena a inglés usando <code>.replace()</code></li>
+    <li>Pedimos a Diego y/o Francisco una lista de vocales nasales en Cuicateco. Escribe un programa que, dada una palabra, imprime un diccionario donde las claves son las vocales y los valores son los índices de las vocales nasales en la palabra.</li>
+
+</ol>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Importar Módulos y Funciones en Python</title>
+</head>
+<body>
+    <h1>Importar Módulos y Funciones en Python</h1>
+    <p>En Python, los módulos son archivos que contienen código Python. Estos módulos pueden incluir funciones, clases y variables que puedes reutilizar en otros programas. Importar módulos y funciones te permite organizar tu código y evitar la repetición.</p>
+    
+    <h2>Importar un Módulo Completo</h2>
+    <p>Para importar un módulo completo, utiliza la palabra clave <code>import</code> seguida del nombre del módulo. Por ejemplo:</p>
+    <pre><code>import math</code></pre>
+    <p>Esto te permite acceder a todas las funciones y variables definidas en el módulo <code>math</code>.</p>
+    
+    <h2>Importar Funciones Específicas</h2>
+    <p>Si solo necesitas una función específica de un módulo, puedes importarla directamente usando la palabra clave <code>from</code> seguida del nombre del módulo y la palabra clave <code>import</code> seguida del nombre de la función. Por ejemplo:</p>
+    <pre><code>from math import sqrt</code></pre>
+    <p>Esto te permite usar la función <code>sqrt</code> directamente sin tener que escribir <code>math.sqrt</code>.</p>
+    
+    <h2>Importar con Alias</h2>
+    <p>También puedes importar módulos o funciones con un alias para simplificar su uso. Utiliza la palabra clave <code>as</code> para asignar un alias. Por ejemplo:</p>
+    <pre><code>import math as m</code></pre>
+    <p>Ahora puedes usar <code>m</code> en lugar de <code>math</code> para acceder a las funciones del módulo.</p>
+    <pre><code>from math import sqrt as raiz</code></pre>
+    <p>Esto te permite usar <code>raiz</code> en lugar de <code>sqrt</code>.</p>
+    
+    <h2>Conclusión</h2>
+    <p>Importar módulos y funciones en Python es una práctica esencial para escribir código limpio y eficiente. Te permite reutilizar código existente y mantener tus programas organizados.</p>
+</body>
+</html>
+<h2>La Biblioteca Estándar (Standard Library) de Python</h2>
+<p>Python viene con una extensa biblioteca estándar que incluye módulos y paquetes para realizar una amplia variedad de tareas. Algunos de los módulos más útiles y comunes incluyen:</p>
+
+<h3>re</h3>
+<p>El módulo <code>re</code> proporciona soporte para expresiones regulares, lo que permite buscar y manipular cadenas de texto. Por ejemplo:</p>
+<pre><code>import re
+pattern = r'\b\w{4}\b'
+text = 'Este es un ejemplo de texto con palabras de cuatro letras.'
+matches = re.findall(pattern, text)
+print(matches)  # Imprime las palabras de cuatro letras</code></pre>
+
+<h3>string</h3>
+<p>El módulo <code>string</code> incluye constantes y clases para manipular cadenas de texto. Por ejemplo:</p>
+<pre><code>import string
+print(string.ascii_letters)  # Imprime todas las letras ASCII</code></pre>
+
+<h3>textwrap</h3>
+<p>El módulo <code>textwrap</code> proporciona funciones para dar formato a párrafos de texto. Por ejemplo:</p>
+<pre><code>import textwrap
+text = "Este es un ejemplo de un párrafo que necesita ser envuelto."
+wrapped_text = textwrap.fill(text, width=40)
+print(wrapped_text)  # Imprime el texto envuelto a 40 caracteres por línea</code></pre>
+
+<h3>difflib</h3>
+<p>El módulo <code>difflib</code> proporciona herramientas para comparar secuencias, incluyendo cadenas de texto. Por ejemplo:</p>
+<pre><code>import difflib
+text1 = "Hola mundo"
+text2 = "Hola Mundo"
+differ = difflib.Differ()
+diff = list(differ.compare(text1.split(), text2.split()))
+print('\n'.join(diff))  # Imprime las diferencias entre las dos cadenas</code></pre>
+
+<h3>unicodedata</h3>
+<p>El módulo <code>unicodedata</code> permite trabajar con datos de caracteres Unicode. Por ejemplo:</p>
+<pre><code>import unicodedata
+char = 'ñ'
+name = unicodedata.name(char)
+print(name)  # Imprime el nombre del carácter Unicode</code></pre>
+
+<p>Estos son solo algunos ejemplos de los muchos módulos disponibles en la biblioteca estándar de Python. Explorar y aprender a usar estos módulos puede ayudarte a escribir código más poderoso y eficiente.</p>
+
+<h2>Cómo usar <code>dir</code> y <code>help</code></h2>
+<p>Para explorar los módulos y funciones disponibles en Python, puedes usar las funciones integradas <code>dir</code> y <code>help</code>. Por ejemplo:</p>
+<pre><code>import re
+print(dir(re))  # Imprime una lista de funciones y variables en el módulo re
+print(help(re.search))  # Imprime la documentación de la función search en el módulo re</code></pre>
+

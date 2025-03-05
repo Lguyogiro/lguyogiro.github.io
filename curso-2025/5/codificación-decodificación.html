@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <title>Unicode y la Codificación/Descodificación de texto</title>
+</head>
+<body>
+    <h1>Unicode y la Codificación/Descodificación de texto</h1>
+    <p>En esta página vamos a aprender sobre Unicode y cómo se representa el texto en Python.</p>
+
+    <h2>Codificación/Descodificación de Texto</h2>
+    <ul>
+        <li>Para almacenar texto en un archivo o en la memoria de una computadora, necesitas convertir los caracteres en números (1s y 0s).</li>
+        <li>En Python, es fácil imaginar cómo se representa un número, como 23, de esta manera: Sólo se tiene que convertir a binario (10111).</li>
+        <li>Pero, ¿cómo se representa una letra o un símbolo? ¿Cómo se representa la letra "A"?</li>
+        <li>Inicialmente, se utilizó un sistema llamado ASCII (American Standard Code for Information Interchange) que asignaba un número (entre 0 y 127) a cada letra y símbolo.</li>
+        <li>Por ejemplo, la letra "A" se representaba con el número 65.</li>
+        <li>El problema con ASCII es que sólo soporta 128 caracteres, lo cual no es suficiente para representar todos los caracteres de todos los idiomas.</li>
+        <li>La codificación de texto es el proceso de convertir un carácter en un número.</li>
+        <li>Hay varios esquemas de codificación de texto, como ASCII, UTF-8, UTF-16, UTF-32, latin-1, etc.</li>
+        <li>UTF-8 es el esquema de codificación de texto más común y se utiliza en la mayoría de los sistemas y páginas web.</li>
+        <li>UTF-8 es compatible con Unicode y puede representar todos los caracteres Unicode.</li>
+    </ul>
+    <p>Entonces la <strong>codificación (encoding)</strong> de texto es la manera en la conviertes el texto en binario para almacenar y/o transferir el texto en la computadora</p>
+    <p>Y la <strong>descodificación (decoding)</strong> de texto es la manera en la que conviertes el binario de nuevo a texto para que puedas leerlo.</p>
+
+    <h4>Ejemplo de Codificación y Descodificación en Python</h4>
+    <pre><code>texto = "Hola, ¿cómo estás?"
+encoded_text = texto.encode("utf-8")
+print(encoded_text)  # b'Hola, ¿cómo estás?'
+decoded_text = encoded_text.decode("utf-8")
+print(decoded_text)  # Hola, ¿cómo estás?
+</code></pre>
+
+    <p>Cuando escribes y/o lees un archivo con texto, tu sistema operativo tiene que usar una de las varias posibles codificaciones de texto para convertir el texto en binario.</p>
+    <p>En sistemas Linux/MacOS, la codificación default es UTF-8.</p>
+    <p>Si lees un archivo usando una codificación diferente a la con la que se escribió, es posible que veas caracteres extraños o incorrectos.</p>
+    <p>Ahora, vamos a ver esto en acción....</p>
+
+    <h2>Unicode</h2>
+    <ul>
+        <li>Unicode es un sistema que asigna un número único a cada carácter, independientemente de la plataforma, el programa o el idioma.</li>
+        <li>Unicode soporta más de 143,000 caracteres, incluyendo letras, números, símbolos y emojis.</li>
+        <li>Por ejemplo, la letra "A" tiene el número Unicode 65 y el emoji "😊" tiene el número Unicode 128522.</li>
+    </ul>
+    <p>En Python, para ver el número Unicode de un carácter, puedes usar la función <code>ord()</code>:</p>
+    <pre><code>print(ord("A"))  # 65</code></pre>
+    <pre><code>print(ord("á"))  # 225</code></pre>
+
+</body>
