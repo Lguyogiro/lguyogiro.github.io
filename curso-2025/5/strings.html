@@ -34,7 +34,15 @@ print(partes)
     <pre><code>
 partes = cadena.split("!", 1)
 print(partes)  # ['Hola, mundo', ' Bienvenidos! a Python.']
-
+</code></pre>
+        <h2>Replace</h2>
+    <p>El método <code>replace</code> se utiliza para reemplazar una subcadena con otra subcadena en una cadena. Por ejemplo:</p>
+    <pre><code>
+cadena = "Hola, mundo!"
+nueva_cadena = cadena.replace("mundo", "amigos")
+print(nueva_cadena)  # Hola, amigos!
+    </code></pre>
+    
     <h2>Count</h2>
     <p>El método <code>count</code> se utiliza para contar el número de veces que aparece una subcadena en una cadena. Por ejemplo:</p>
     <pre><code>
@@ -68,7 +76,8 @@ print(mayusculas)  # HOLA, MUNDO!
 titulo = cadena.title()
 print(titulo)  # Hola, Mundo!
     </code></pre>
-    <p>Prabar checar si una cadena tiene puras mayúsculas, puras minúsculas, o si tiene la primera letra en mayúscula y el resto en minúsculas, podemos usar los métodos <code>isupper</code>, <code>islower</code> y <code>istitle</code>, respectivamente.</p>
+    <p>Para checar si una cadena tiene puras mayúsculas, puras minúsculas, o si tiene la primera letra en mayúscula y el resto en minúsculas,</p> 
+    <p>podemos usar los métodos <code>isupper</code>, <code>islower</code> y <code>istitle</code>, respectivamente.</p>
     <pre><code>
 cadena = "HOLA, MUNDO!"
 print(cadena.isupper())  # True
@@ -92,8 +101,12 @@ print(cadena.endswith("mundo!"))  # True
 <ol>
     <li>Escribe un programa que le pida al usuario una cadena de texto y luego imprima la cadena en mayúsculas, minúsculas y con la primera letra en mayúscula.</li>
     <li>Escribe un programa que lea una cadena de texto y cuente el número de palabras en la cadena.</li>
-    <li>Dada la cadena "Hola, ahorita salgo tengo qué comer primero", y el diccionario de traducciones léxicas {"comer": "eat", "tengo qué": "I have to", "salgo": "I head out", "Hola": "Hello", "primero": "first"}, escribe un programa que traduzca la cadena a inglés usando <code>.replace()</code></li>
-    <li>Pedimos a Diego y/o Francisco una lista de vocales nasales en Cuicateco. Escribe un programa que, dada una palabra, imprime un diccionario donde las claves son las vocales y los valores son los índices de las vocales nasales en la palabra.</li>
+    <li>Dada la cadena "Hola, ahorita salgo tengo qué comer primero", y el diccionario de traducciones léxicas 
+        <pre><code>{"comer": "eat", "tengo qué": "I have to", "salgo": "I head out", "Hola": "Hello", "primero": "first"}</code></pre> 
+        escribe un programa que traduzca la cadena a inglés usando <code>.replace()</code></li>
+    <li><p>Pedimos a Diego y/o Francisco una lista de vocales nasales en Cuicateco.</p> 
+        <p>Escribe un programa que, dada una palabra, imprime un diccionario donde las claves </p>
+        <p>son las vocales y los valores son los índices de las vocales nasales en la palabra.</p></li>
 
 </ol>
 </body>
