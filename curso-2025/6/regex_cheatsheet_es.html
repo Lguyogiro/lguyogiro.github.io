@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Expresiones Regulares de Python</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        h1 {
+            color: #00698f;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Expresiones Regulares de Python 2.7</h1>
+    
+    <h2>Caracteres no especiales se igualan a sí mismos. Excepciones son los caracteres 
+especiales:</h2>
+    <ul>
+        <li>\: Escapa un carácter especial o inicia una secuencia.</li>
+        <li>.: Coincide con cualquier carácter excepto el salto de línea, véase 
+re.DOTALL</li>
+        <li>^: Coincide con el inicio de la cadena, véase re.MULTILINE</li>
+        <li>$: Coincide con el final de la cadena</li>
+        <li>Caracteres no especiales se igualan a sí mismos.</li>
+    </ul>
+    
+    <h2>Secuencias de escape:</h2>
+    <table>
+        <tr>
+            <th>Secuencia</th>
+            <th>Descripción</th>
+        </tr>
+        <tr>
+            <td>\n</td>
+            <td>Salto de línea</td>
+        </tr>
+        <tr>
+            <td>\t</td>
+            <td>Tabulador</td>
+        </tr>
+        <tr>
+            <td>\\</td>
+            <td>Barra invertida</td>
+        </tr>
+        <tr>
+            <td>\"</td>
+            <td>Comillas dobles</td>
+        </tr>
+        <tr>
+            <td>'</td>
+            <td>Comillas simples</td>
+        </tr>
+    </table>
+    
+    <h2>Clases de caracteres:</h2>
+    <table>
+        <tr>
+            <th>Clase</th>
+            <th>Descripción</th>
+        </tr>
+        <tr>
+            <td>.</td>
+            <td>Cualquier carácter excepto el salto de línea</td>
+        </tr>
+        <tr>
+            <td>\d</td>
+            <td>Dígitos (equivalente a [0-9])</td>
+        </tr>
+        <tr>
+            <td>\D</td>
+            <td>No dígitos (equivalente a [^0-9])</td>
+        </tr>
+        <tr>
+            <td>\w</td>
+            <td>Palabras (equivalente a [a-zA-Z0-9_])</td>
+        </tr>
+        <tr>
+            <td>\W</td>
+            <td>No palabras (equivalente a [^a-zA-Z0-9_])</td>
+        </tr>
+        <tr>
+            <td>\s</td>
+            <td>Caracteres de espacio en blanco (equivalente a [\t\n\r\f\v ])</td>
+        </tr>
+        <tr>
+            <td>\S</td>
+            <td>Caracteres que no son de espacio en blanco (equivalente a [^\t\n\r\f\v ])</td>
+        </tr>
+    </table>
+    
+    <h2>Cuantificadores:</h2>
+    <table>
+        <tr>
+            <th>Cuantificador</th>
+            <th>Descripción</th>
+        </tr>
+        <tr>
+            <td>*</td>
+            <td>0 o más ocurrencias del patrón anterior</td>
+        </tr>
+        <tr>
+            <td>+</td>
+            <td>1 o más ocurrencias del patrón anterior</td>
+        </tr>
+        <tr>
+            <td>?</td>
+            <td>0 o 1 ocurrencia del patrón anterior</td>
+        </tr>
+        <tr>
+            <td>{n}</td>
+            <td>n ocurrencias exactas del patrón anterior</td>
+        </tr>
+        <tr>
+            <td>{n,}</td>
+            <td>n o más ocurrencias del patrón anterior</td>
+        </tr>
+        <tr>
+            <td>{n,m}</td>
+            <td>entre n y m ocurrencias del patrón anterior</td>
+        </tr>
+    </table>
+    
+    <h2>Clases de caracteres personalizadas:</h2>
+    <p>Se pueden crear clases de caracteres personalizadas utilizando corchetes. Por 
+ejemplo: [abc] coincide con 'a', 'b' o 'c'.</p>
+    
+    <h2>Anclajes:</h2>
+    <table>
+        <tr>
+            <th>Anclaje</th>
+            <th>Descripción</th>
+        </tr>
+        <tr>
+            <td>^</td>
+            <td>El inicio de la cadena</td>
+        </tr>
+        <tr>
+            <td>$</td>
+            <td>El final de la cadena</td>
+        </tr>
+    </table>
+    
+    <h2>Grupo y captura:</h2>
+    <p>Se pueden crear grupos utilizando paréntesis. Por ejemplo: (abc) coincide con 
+'abc' y crea un grupo que se puede referenciar posteriormente.</p>
+    
+    <h2>Referencia a un grupo:</h2>
+    <p>Se pueden referenciar a los grupos anteriores utilizando \n, donde n es el 
+número del grupo. Por ejemplo: (abc)\1 coincide con 'abcabc'.</p>
+    
+    <h2>Funciones de re:</h2>
+    <table>
+        <tr>
+            <th>Función</th>
+            <th>Descripción</th>
+        </tr>
+        <tr>
+            <td>re.search(pat, str)</td>
+            <td>Busca la primera ocurrencia del patrón en la cadena</td>
+        </tr>
+        <tr>
+            <td>re.match(pat, str)</td>
+            <td>Busca el patrón al inicio de la cadena</td>
+        </tr>
+        <tr>
+            <td>re.fullmatch(pat, str)</td>
+            <td>Busca el patrón que coincide con toda la cadena</td>
+        </tr>
+        <tr>
+            <td>re.split(pat, str)</td>
+            <td>Divide la cadena en substrings utilizando el patrón como separador</td>
+        </tr>
+        <tr>
+            <td>re.sub(pat, repl, str)</td>
+            <td>Sustituye las ocurrencias del patrón por la cadena de reemplazo</td>
+        </tr>
+    </table>
+    
+    <h2>Atributos de los objetos de coincidencia:</h2>
+    <table>
+        <tr>
+            <th>Atributo</th>
+            <th>Descripción</th>
+        </tr>
+        <tr>
+            <td>group()</td>
+            <td>La parte de la cadena que coincide con el patrón</td>
+        </tr>
+        <tr>
+            <td>groups()</td>
+            <td>Las partes de la cadena que coinciden con los grupos del patrón</td>
+        </tr>
+        <tr>
+            <td>start()</td>
+            <td>La posición de inicio de la coincidencia en la cadena original</td>
+        </tr>
+        <tr>
+            <td>end()</td>
+            <td>La posición final de la coincidencia en la cadena original</td>
+        </tr>
+    </table>
+    
+    <p><a href="https://docs.python.org/3/library/re.html">Documentación oficial de la 
+biblioteca re</a></p>
+</body>
+</html>
+
