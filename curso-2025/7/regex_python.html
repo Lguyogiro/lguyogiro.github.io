@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Introducción al módulo `re` de Python</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<p>Para utilizar las expresiones regulares en un programa de Python, tenemos que importar el módulo <code>re</code>:</p>
+<code>import re</code>
+
+<p>Hay varias funciones del módulo `re`, como <code>search</code>, <code>match</code>, <code>sub</code>, <code>split</code>, <code>findall</code>, y <code>finditer</code></p>
+<ul>
+    <li><strong><code>search(patron, cadena)</code></strong>: Busca la primera ocurrencia del patrón en la cadena y 
+devuelve un objeto de coincidencia si lo encuentra. Si no se encuentra ninguna coincidencia, devuelve 
+<code>None</code>. Ejemplo: 
+        <pre><code>import re
+cadena = "Hola, ¿cómo estás?"
+patron = "cómo"
+resultado = re.search(patron, cadena)
+if resultado:
+    print(f"Se encontró '{patron}' en la posición {resultado.start()}")
+else:
+    print(f"No se encontró '{patron}'")</code></pre>
+    </li>
+    <li><strong><code>match(patron, cadena)</code></strong>: Busca el patrón al principio de la cadena y devuelve un 
+objeto de coincidencia si lo encuentra. Si no se encuentra ninguna coincidencia, devuelve <code>None</code>. Ejemplo: 
+        <pre><code>import re
+cadena = "Hola, mundo"
+patron = "Hola"
+resultado = re.match(patron, cadena)
+if resultado:
+    print(f"La cadena comienza con '{patron}'")
+else:
+    print(f"La cadena no comienza con '{patron}'")</code></pre>
+    </li>
+    <li><strong><code>sub(patron, reemplazo, cadena)</code></strong>: Reemplaza todas las ocurrencias del patrón en la 
+cadena por el texto de reemplazo. Ejemplo: 
+        <pre><code>import re
+cadena = "Me gusta el café"
+patron = "café"
+reemplazo = "té"
+nueva_cadena = re.sub(patron, reemplazo, cadena)
+print(nueva_cadena)  # Salida: Me gusta el té</code></pre>
+    </li>
+    <li><strong><code>split(patron, cadena)</code></strong>: Divide la cadena en una lista de substrings según el 
+patrón. Ejemplo: 
+        <pre><code>import re
+cadena = "hola,mundo,adiós"
+patron = ","
+lista = re.split(patron, cadena)
+print(lista)  # Salida: ['hola', 'mundo', 'adiós']</code></pre>
+    </li>
+    <li><strong><code>findall(patron, cadena)</code></strong>: Busca todas las ocurrencias del patrón en la cadena y 
+devuelve una lista de coincidencias. Ejemplo: 
+        <pre><code>import re
+cadena = "Mi número de teléfono es 56 1234 7890 y el de mi amigo es 797 1717 8982"
+patron = r"\d{2,3} \d{4} \d{4}"
+numeros = re.findall(patron, cadena)
+print(numeros)  # Salida: ['56 1234 7890', '797 1717 8982']</code></pre>
+    </li>
+    <li><strong><code>finditer(patron, cadena)</code></strong>: Busca todas las ocurrencias del patrón en la cadena y 
+devuelve un iterador de objetos de coincidencia. Ejemplo: 
+        <pre><code>import re
+cadena = "Mi número de teléfono es 56 1234 7890 y el de mi amigo es 797 1717 8982"
+patron = r"\d{2,3} \d{4} \d{4}"
+numeros = re.findall(patron, cadena)
+for coincidencia in re.finditer(patron, cadena):
+    print(f"Se encontró un número de teléfono en la posición {coincidencia.start()}: {coincidencia.group()}")</code></pre>
+    </li>
+</ul>
+
+</body>
+</html>

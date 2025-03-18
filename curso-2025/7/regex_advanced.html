@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex ejercicios parte 2 (con Python)</title>
+</head>
+<body>
+<ol>
+    <li><p>Escribe un programa en python usando regex que coincida con las palabras. Usa el texto "¡hola, mundo! ¿como están---bien?." para probar tu regex.</p></li>
+    <li><p>Ahora escribe un programa en python con regex que detecte la repitición de una palabra (por ejemplo para detectar errores ortográficos).</p>
+        <p>Usa el texto "hola hola mundo. Nunca imaginé que que por aquí estaría yo yo.</p>
+    </li>
+    <li><p>Escribe un programa para tokenizar una cadena de texto. se deberían de separar los tokens con la ocurrencia de cualquier signo de puntuación o espacio en blanco</p></li>
+    <li>
+        <p>Escribe un programa que detecte un correo electrónico válido (usa las siguientes listas de correos válidos/no válidos para probar tu expresión)</p>
+        <ul><strong>válidos</strong>
+            <li>email@example.com</li>
+            <li>firstname.lastname@example.com</li>
+            <li>email@subdomain.example.com</li>
+            <li>firstname+lastname@example.com</li>
+            <li>email@123.123.123.123</li>
+            <li>email@[123.123.123.123]</li>
+            <li>“email”@example.com</li>
+            <li>1234567890@example.com</li>
+            <li>email@example-one.com</li>
+            <li>_______@example.com</li>
+            <li>email@example.name</li>
+            <li>email@example.museum</li>
+            <li>email@example.co.jp</li>
+            <li>firstname-lastname@example.com</li>
+        </ul>
+        <hr>
+        <ul><strong>no válidos</strong>
+            <li>plainaddress</li>
+            <li>@example.com</li>
+            <li>email.example.com</li>
+            <li>email@example@example.com</li>
+            <li>.email@example.com</li>
+            <li>email.@example.com</li>
+            <li>email..email@example.com</li>
+            <li>あいうえお@example.com</li>
+            <li>email@example.com (Joe Smith)</li>
+            <li>email@example</li>
+            <li>email@-example.com</li>
+            <li>email@example.web</li>
+            <li>email@111.222.333.44444</li>
+            <li>email@example..com</li>
+            <li>Abc..123@example.com</li>
+        </ul>
+    </li>
+    <li>
+        Escribe un program Python que reemplace las vocales del texto con V y los consonantes con C (toma en cuenta digrafías)
+    </li>
+    <li><p>Usando `re`, escribe un programa que acepta una palabra e imprime sus sílabas en una lista</p></li>
+
+</ol>
