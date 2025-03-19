@@ -54,7 +54,7 @@ print(lista)  # Salida: ['hola', 'mundo', 'adiós']</code></pre>
 devuelve una lista de coincidencias. Ejemplo: 
         <pre><code>import re
 cadena = "Mi número de teléfono es 56 1234 7890 y el de mi amigo es 797 1717 8982"
-patron = r"\d{2,3} \d{4} \d{4}"
+patron = "\d{2,3} \d{4} \d{4}"
 numeros = re.findall(patron, cadena)
 print(numeros)  # Salida: ['56 1234 7890', '797 1717 8982']</code></pre>
     </li>
@@ -62,7 +62,7 @@ print(numeros)  # Salida: ['56 1234 7890', '797 1717 8982']</code></pre>
 devuelve un iterador de objetos de coincidencia. Ejemplo: 
         <pre><code>import re
 cadena = "Mi número de teléfono es 56 1234 7890 y el de mi amigo es 797 1717 8982"
-patron = r"\d{2,3} \d{4} \d{4}"
+patron = "\d{2,3} \d{4} \d{4}"
 numeros = re.findall(patron, cadena)
 for coincidencia in re.finditer(patron, cadena):
     print(f"Se encontró un número de teléfono en la posición {coincidencia.start()}: {coincidencia.group()}")</code></pre>
