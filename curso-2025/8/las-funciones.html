@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Las funciones en Python</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h2>Las funciones</h2>
+<p>Las funciones son bloques de código que se pueden reutilizar en un programa. En Python, se definen con la palabra clave <code>def</code>:</p>
+<pre><code>def saludar():
+    print("¡Hola, mundo!")</code></pre>
+<p>Para llamar a una función, simplemente escribimos su nombre seguido de paréntesis:</p>
+<pre><code>saludar()</code></pre>
+<p>Las funciones pueden recibir argumentos, que son valores que se pasan a la función para que los utilice. Por ejemplo:</p>
+<pre><code>def saludar(nombre):
+    print("¡Hola", nombre, "!")</code></pre>
+<p>Para llamar a esta función, tenemos que pasarle un argumento:</p>
+<pre><code>saludar("Juan")</code></pre>
+
+<p>Las funciones pueden devolver un valor con la palabra clave <code>return</code>. Por ejemplo:</p>
+<pre><code>def sumar(a, b):
+    return a + b</code></pre>
+<p>Para utilizar el valor devuelto por la función, lo asignamos a una variable:</p>
+<pre><code>resultado = sumar(3, 5)
+print(resultado)  # Salida: 8</code></pre>
+
+<p>Las funciones también pueden tener argumentos con valores por defecto. Por ejemplo:</p>
+<pre><code>def saludar(nombre="mundo"):
+    print("¡Hola", nombre, "!")</code></pre>
+<p>Si no pasamos un argumento a la función, se utilizará el valor por defecto:</p>
+<pre><code>saludar()  # Salida: ¡Hola mundo!</code></pre>
+
+
+<h2>Ejercicios</h2>
+<ol>
+    <li> Escribe una función que tome dos números como argumentos y devuelva su producto.</li>
+    <li> Escribe una función que tome una lista de números como argumento y devuelva la suma de todos los números en la lista.</li>
+    <li> Escribe una función que tome una cadena como argumento y devuelva la cadena en mayúsculas.</li>
+    <li> Escribe una función que tome una lista de cadenas como argumento y devuelva una lista con las cadenas en mayúsculas.</li>
+    <li> Qué alguien nos de una lista de reglas para normalizar transcripciones. Escribe una función para realizar la normalización, o sea que tome como argumento una transcripción no normalizada, y devuelva la normalizada.</li>
+    <li> Escribe una función que tome como su argumento el path de un archivo de texto, cree un diccionario de las frecuencias de las palabras, y devuelva la palabra mas frecuente.</li>
+</ol>
+
+</body>
+</html>
