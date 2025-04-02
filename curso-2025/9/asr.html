@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reconocimiento de voz / transcripción automática</title>
+</head>
+<body>
+<h2>Reconocimiento de voz / transcripción automática</h2>
+<p>Ahora vamos a ver cómo hacer reconocimiento de voz con Python y modelos abiertos de huggingface. Para esto, primero necesitamos instalar el paquete `transformers`:</p>
+<pre>
+    <code>pip3 install transformers</code>
+</pre>
+<p>Usando el siguiente código, podemos generar una transcripción automática para un audio.</p>
+<pre><code>from transformers import pipeline
+model_name = "clu-ling/whisper-small-spanish"
+asr_pipeline = pipeline("automatic-speech-recognition", model=model_name)
+result = asr_pipeline("salida_16k_10-20.wav")
+print(result["text"])
+</code></pre>
+</body>
+
+</html>

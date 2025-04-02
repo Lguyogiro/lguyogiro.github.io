@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajando con audio</title>
+</head>
+<body>
+    <h2>Trabajando con audio en la línea de comandos y en Python</h2>
+
+<h4>Línea de comandos (sox)</h4>
+Podemos trabajar programáticamente con audio desde la línea de comandos usando la herramienta <code>sox</code>:
+<ol>
+    <li><strong>Ubuntu</strong>: 
+        <pre><code>sudo apt update
+sudo apt -y install sox</code>
+        </pre>
+    </li>
+    <li><strong>Mac</strong>:
+    <pre><code>brew install sox</code></pre>
+    </li>
+</ol>
+<p> para usar sox con archivos .mp3, también necesitas instalar <code>libsox-fmt-mp3</code></p>
+
+
+<h4>Ver datos sobre un archivo de audio</h4>
+<p>Si quieres saber detalles sobre un audio (p. ej., el número de canales, la tasa de muestreo, etc), puedes usar sox con <code>--i</code>:</p>
+<pre><code>sox --i path/to/audio.wav
+</code></pre>
+
+<h4>Cambiar formato</h4>
+<pre><code>sox entrada.mp3 salida.wav</code></pre>
+<h4>Cambiar la tasa de muestreo</h4>
+<p>La tasa de muestreo se refiere al número de muestras por segundo que se toman para representar un sonido. SoX permite cambiar la tasa de muestreo utilizando el comando 
+<code>sox -r</code>. Por ejemplo, si tenemos un archivo de audio llamado <code>música.wav</code> y queremos cambiar su tasa de muestreo a 44.1 kHz, podemos utilizar el siguiente 
+comando:</p>
+<pre><code>sox entrada.wav -r 44100 salida.wav</code></pre>
+<p>Esto creará un nuevo archivo llamado <code>salida.wav</code> con la misma música pero con una tasa de muestreo de 44.1 kHz.</p>
+
+<h4>Reducir de estéreo a mono</h4>
+<p>SoX también permite reducir un archivo de audio estéreo a mono utilizando el comando <code>sox -c 1</code>. Por ejemplo, si tenemos un archivo de audio llamado 
+<code>música_estereo.wav</code> y queremos convertirlo a mono, podemos utilizar el siguiente comando:</p>
+<pre><code>sox entrada_estereo.wav -c 1 salida_mono.wav</code></pre>
+<p>Esto creará un nuevo archivo llamado <code>salida_mono.wav</code> con la misma música pero en mono.</p>
+
+<h4>Cortar el audio dado un inicio y fin de timestamp</h4>
+<p>SoX permite cortar un archivo de audio dado un inicio y fin de timestamp utilizando el comando <code>trim</code>, seguido por dos marcas de tiempo, el inicio y la duración. Por ejemplo, si tenemos un archivo de audio llamado 
+<code>música.wav</code> y queremos cortar desde los 10 segundos hasta los 60 segundos (empezando en 10 segundos y durando 50 segundos), podemos utilizar el siguiente comando:</p>
+<pre><code>sox entrada.wav salida_cortada.wav trim 10.0 50.0</code></pre>
+<p>Esto creará un nuevo archivo llamado <code>salida_cortada.wav</code> con la música cortada desde los 10 segundos hasta los 20 segundos.</p>
+
+
+<h2>Ejercicios</h2>
+<ol>
+    <li>Descarga el archivo <a href="9/ejemplo.mp3">ejemplo.mp3</a>. Usa sox para observar la información sobre este archivo y convertirlo al formato .wav</li>
+    <li>Crea un archivo modificado que tenga un solo canal y que su tasa de muestreo sea 16000.</li>
+    <li>Ahora, crea otro archivo con el contenido de 10 a 20 segundos del archivo que acabas de crear en el paso previo.</li>
+</ol>
+</body>
+</html>

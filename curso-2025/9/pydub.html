@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajando con audio (pydub)</title>
+</head>
+<body>
+<h1>Introducción a PyDub</h1>
+<p>PyDub es una biblioteca de Python que permite trabajar 
+con archivos de audio de manera sencilla y intuitiva.</p>
+
+<p>Para instalarlo, usa <code>pip</code>: <code>pip3 install pydub</code></p>
+
+<h2>Convertir un archivo MP3 a WAV</h2>
+<p>PyDub permite convertir un archivo MP3 a WAV utilizando 
+el método <code>export()</code> con el parámetro 
+<code>format</code>. Por ejemplo:</p>
+<pre><code>from pydub import AudioSegment
+
+audio = AudioSegment.from_file("audio.mp3")
+audio.export("salida.wav", format="wav")</code></pre>
+<p>Esto creará un nuevo archivo llamado 
+<code>salida.wav</code> con el mismo audio pero en formato 
+WAV.</p>
+
+<h2>Cambiar la tasa de muestreo</h2>
+<p>La tasa de muestreo se refiere al número de muestras por 
+segundo que se toman para representar un sonido. PyDub permite 
+cambiar la tasa de muestreo utilizando  el método <code>.set_frame_rate()</code></p>
+<pre><code>from pydub import AudioSegment
+
+audio = AudioSegment.from_file("audio.wav")
+audio_with_altered_frame_rate = audio.set_frame_rate(44100)
+audio_with_altered_frame_rate.export("salida.wav", format="wav")</code></pre>
+<p>Esto creará un nuevo archivo llamado 
+<code>salida.wav</code> con el mismo audio pero con una tasa 
+de muestreo de 44.1 kHz.</p>
+
+<h2>Reducir el número de canales</h2>
+<p>PyDub permite reducir el número de canales (de estéreo a 
+mono) utilizando el método <code>set_channels()</code>. Por 
+ejemplo:</p>
+<pre><code>from pydub import AudioSegment
+
+audio = AudioSegment.from_file("audio_estereo.wav")
+audio_mono = audio.set_channels(1)
+audio_mono.export("salida_mono.wav", format="wav")</code></pre>
+<p>Esto creará un nuevo archivo llamado 
+<code>salida_mono.wav</code> con el mismo audio pero en 
+mono.</p>
+
+<h2>Cortar un trozo de audio según marcas de tiempo</h2>
+<p>PyDub permite cortar un trozo de audio según marcas de 
+tiempo utilizando slicing. Por ejemplo, si tenemos un archivo 
+de audio llamado <code>audio.wav</code> y queremos cortar 
+desde los 10 segundos hasta los 20 segundos, podemos utilizar 
+el siguiente código:</p>
+<pre><code>from pydub import AudioSegment
+
+audio = AudioSegment.from_file("audio.wav")
+audio_cortado = audio[10000:20000]  # en milisegundos
+audio_cortada.export("salida_cortada.wav", format="wav")</code></pre>
+<p>Esto creará un nuevo archivo llamado 
+<code>salida_cortada.wav</code> con el audio cortado desde los 
+10 segundos hasta los 20 segundos.</p>
+
+
+<h2>Ejercicios</h2>
+<p>Ha lo mismo que con sox, ahora en un script de Python.</p>
+
+</body>
+</html>
