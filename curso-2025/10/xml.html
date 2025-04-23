@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML</title>
+</head>
+<body>
+    <h1>XML</h1>
+    <p>XML (eXtensible Markup Language) es un lenguaje de marcado que se utiliza para almacenar y transportar datos. Es similar a HTML, pero está diseñado para ser más flexible y extensible.</p>
+    <p>Muchas aplicaciones utilizan XML para organizar y guardar sus datos.</p>
+    <p><strong>ELAN guarda todas las "líneas" como XML</strong>, entonces si aprendemos a manipular este formato podemos integrar programas de Python directamente con ELAN</p>
+
+    <hr>
+
+    <h3>Descrición preliminaria</h3>
+    <p>XML se utiliza para estructurar datos de manera jerárquica. Aquí tienes un ejemplo básico de un archivo XML:</p>
+    <pre>
+<code>
+&lt;nota&gt;
+    &lt;para&gt;Recordatorio&lt;/para&gt;
+    &lt;fecha&gt;2023-10-01&lt;/fecha&gt;
+    &lt;remitente&gt;Juan&lt;/remitente&gt;
+    &lt;destinatario&gt;María&lt;/destinatario&gt;
+    &lt;mensaje&gt;No olvides la reunión de mañana.&lt;/mensaje&gt;
+&lt;/nota&gt;
+    </code>
+</pre>
+    <p>En este ejemplo, el elemento raíz es &lt;nota&gt;, y contiene varios elementos hijos como &lt;para&gt;, &lt;fecha&gt;, &lt;remitente&gt;, &lt;destinatario&gt; y &lt;mensaje&gt;. Cada elemento puede tener atributos adicionales si es necesario.</p>
+
+    <h3>Leer, escribir, y manipular XML con Python</h3>
+    <p>Para trabajar con XML en Python, puedes utilizar la biblioteca <code>xml.etree.ElementTree</code>.</p>
+<h3>Ejercicio</h3>
+    <ul>
+        <li>Lee y sigue los ejemplos de <a href="https://dungeonofbits.com/manipular-ficheros-xml-con-python.html">este tutorial</a> para aprender a usar ElementTree para trabajar con XML</li>
+        <li>Usando un editor de texto, abre el archivo "eaf" que creaste con Elan en los ejercicios anteriores. Observa que es XML también. NO HAGAS CAMBIOS A ESTE ARCHIVO PORQUE PUEDE QUE ELAN YA NO LO PUEDA ABRIR. Trata de entender cómo está estructurado el archivo.</li>
+    </ul>

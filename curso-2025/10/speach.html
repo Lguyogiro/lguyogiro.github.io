@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speach</title>
+</head>
+<body>
+<h1>Speach</h1>
+<p>Speach es un paquete de Python que permite trabajar con datos de audio y transcripción en varios formatos. </p>
+<p>En esta página, vamos a ver cómo instalarlo y usarlo para leer un archivo .eaf y agreagar una nueva línea. Esto puede ser útil, por ejemplo, si ya tienes la transcripción en una línea y quieres agregar otra línea con la transcripción normalizada.</p>
+
+<h3>Instalación</h3>
+<ul>
+    <li>Para instalar Speach, abre una terminal y ejecuta el siguiente comando:</li>
+    <pre><code>pip install speach</code></pre>
+    <li>Esto descargará e instalará el paquete Speach y sus dependencias.</li>
+    <li>Una vez instalado, puedes importar Speach en tu código de Python con la siguiente línea:</li>
+    <pre><code>import speach</code></pre>
+</ul>
+
+<h3>Uso básico</h3>
+<ul>
+    <li>Para leer un archivo .eaf con Speach, utiliza la función <code>read_eaf</code>. Por ejemplo:</li>
+    <pre><code>eaf_file = speach.read_eaf('ruta/al/archivo.eaf')</code></pre>
+    <li>Esto cargará el archivo .eaf y lo almacenará en la variable <code>eaf_file</code>.</li>
+    <li>Una vez que tengas el archivo cargado, puedes acceder a las diferentes líneas (tiers) del archivo y manipularlas según tus necesidades.</li>
+    <li>Para ver las líneas que hay en el archivo:
+        <pre><code>print(eaf_file.tiers())</code></pre>
+    </li>
+    <li>Ver las anotaciones en una línea:
+        <pre><code>eaf_file.tiers['nombre_de_la_linea'].annotations:</code></pre>
+    </li>
+    <li>Para iterar sobre esas anotaciones:
+        <pre><code>for annotation in eaf_file.tiers['nombre_de_la_linea'].annotations:
+    print(annotation.start, annotation.end, annotation.text)</code></pre>
+    </li>
+</ul>
+
+
