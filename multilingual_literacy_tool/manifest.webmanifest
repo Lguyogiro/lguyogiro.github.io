@@ -1,0 +1,10 @@
+{
+  "name": "Matimomachtikan! · ¡A aprender! · Let's Learn!",
+  "short_name": "Matimomachtikan",
+  "start_url": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#fdf8ef",
+  "theme_color": "#2f6fde",
+  "icons": [{ "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}
